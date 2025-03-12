@@ -14,18 +14,18 @@ export default function Sidebar(){
         {
             name: "home2",
             link: "/home2",
-            logo : "",
+            logo : <RiHome5Fill/>,
         },
 ]
     return(
         <>
             <div className="h-screen w-2/12 bg-slate-950">
-            <ul>
-                <li className="text-gray-200 grid items-center justify-center mt-12">{siderbarLinks.map(({name, link, logo}, index)=>(
-                    
-                    <Link className="flex items-center gap-3 my-1" to = {link} key={index}>{logo} {name}</Link>
-                ))
-                }</li>
+            <ul className="text-gray-200 grid items-center justify-center mt-12">
+                {siderbarLinks.map(({name,link,logo}, index)=>(
+                    <li >
+                        <Link className="flex items-center gap-3 my-1 text-xl" to = {link} key={index} >{logo} {name}</Link>
+                    </li>
+                ))}
             </ul>
             </div>
         </>
