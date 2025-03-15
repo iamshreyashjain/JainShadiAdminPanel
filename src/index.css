@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
 input[type="checkbox"]:checked {
-    accent-color:oklch(0.41 0.159 10.272);
-
+  accent-color: oklch(0.41 0.159 10.272);
 }
-

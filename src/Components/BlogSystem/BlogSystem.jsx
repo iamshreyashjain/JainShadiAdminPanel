@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const BlogSystem = () => {
-  return (
-    <div>BlogSystem</div>
-  )
-}
+  return <div>BlogSystem</div>;
+};
