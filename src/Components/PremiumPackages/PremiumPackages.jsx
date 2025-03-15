@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const PremiumPackages = () => {
-  return (
-    <div>PremiumPackages</div>
-  )
-}
+  return <div>PremiumPackages</div>;
+};

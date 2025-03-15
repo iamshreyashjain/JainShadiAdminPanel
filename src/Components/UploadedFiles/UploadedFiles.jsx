@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const UploadedFiles = () => {
-  return (
-    <div>UploadedFiles</div>
-  )
-}
+  return <div>UploadedFiles</div>;
+};
