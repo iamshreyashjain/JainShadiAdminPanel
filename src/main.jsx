@@ -15,6 +15,9 @@ import { Marketing } from "./Components/Marketing/Marketing.jsx";
 import { UploadedFiles } from "./Components/UploadedFiles/UploadedFiles.jsx";
 import { WebsiteSetup } from "./Components/WebsiteSetup/WebsiteSetup.jsx";
 import { Settings } from "./Components/Settings/Settings.jsx";
+import { Staffs } from "./Components/Staffs/Staffs.jsx";
+import { System } from "./Components/System/System.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -38,6 +41,8 @@ const router = createBrowserRouter([
       { path: "/home/websiteSetup", element: <WebsiteSetup /> },
       { path: "/home/settings", element: <Settings /> },
       { path: "/home/members", element: <Members /> },
+      { path: "/home/staff", element: <Staffs /> },
+      { path: "/home/system", element: <System /> },
     ],
   },
 ]);
