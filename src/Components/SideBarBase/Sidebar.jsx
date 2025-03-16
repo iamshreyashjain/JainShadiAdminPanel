@@ -90,7 +90,7 @@ export default function Sidebar() {
     {
       index: 12,
       name: "Staffs",
-      link: "/home/Staffs",
+      link: "/home/staff",
       logo: <ImUsers />,
     },
     {
@@ -102,12 +102,12 @@ export default function Sidebar() {
   ];
   return (
     <>
-      <div className="h-screen w-2/12 bg-slate-950">
+      <div className="sticky top-0 overflow-scroll w-2/12 bg-slate-950">
         <ul className="text-gray-200 grid items-center justify-center mt-12">
           {siderbarLinks.map(({ name, link, logo, index}) => (
             <li>
               <Link
-                className="flex items-center gap-3 my-2 text-xl"
+                className="flex items-center  gap-2 text-lg  hover:bg-slate-700 p-2 rounded-lg"
                 to={link}
                 key={index}
               >
