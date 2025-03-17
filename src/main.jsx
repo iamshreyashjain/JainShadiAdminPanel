@@ -18,7 +18,6 @@ import { Settings } from "./Components/Settings/Settings.jsx";
 import { Staffs } from "./Components/Staffs/Staffs.jsx";
 import { System } from "./Components/System/System.jsx";
 
-
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   {

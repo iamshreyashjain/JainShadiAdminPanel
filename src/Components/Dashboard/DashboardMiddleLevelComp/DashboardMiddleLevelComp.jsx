@@ -1,6 +1,3 @@
-export default function DashboardMiddleLevelComp(){
-  return (
-    <div>DashboardMiddleLevelComp</div>
-  )
+export default function DashboardMiddleLevelComp() {
+  return <div>DashboardMiddleLevelComp</div>;
 }
-

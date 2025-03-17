@@ -104,7 +104,7 @@ export default function Sidebar() {
     <>
       <div className="sticky top-0 overflow-scroll w-2/12 bg-slate-950">
         <ul className="text-gray-200 grid items-center justify-center mt-12">
-          {siderbarLinks.map(({ name, link, logo, index}) => (
+          {siderbarLinks.map(({ name, link, logo, index }) => (
             <li>
               <Link
                 className="flex items-center  gap-2 text-lg  hover:bg-slate-700 p-2 rounded-lg"
