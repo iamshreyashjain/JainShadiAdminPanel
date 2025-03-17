@@ -3,7 +3,7 @@ import ShadiPanel_Logo from "../../assets/Images/ShadiPanel_Logo.png";
 
 export default function Header() {
   return (
-    <div className="relative w-full flex items-center bg-rose-900 ">
+    <div className=" sticky top-0 z-10  w-full flex items-center bg-rose-900 ">
       {/* Background Image */}
       <img
         src={bg_header}

@@ -6,57 +6,57 @@ export default function DashboardTopLevelComp() {
   const data = [
     {
       index: 1,
-      quantity: 230,
+      quantity: 150,
       title: "Total Members",
       logo: <FiUsers />,
     },
     {
       index: 2,
-      quantity: 260,
-      title: "Total Members",
+      quantity: 160,
+      title: "Premium Members",
       logo: <FiUsers />,
     },
     {
       index: 3,
-      quantity: 260,
-      title: "Total Members",
+      quantity: 130,
+      title: "Free Members",
       logo: <FiUsers />,
     },
     {
       index: 4,
-      quantity: 260,
-      title: "Total Members",
+      quantity: 200,
+      title: "Blocked Members",
       logo: <FiUsers />,
     },
     {
       index: 5,
-      quantity: 260,
-      title: "Total Members",
+      quantity: 210,
+      title: "Complete Members",
       logo: <FiUsers />,
     },
     {
       index: 6,
-      quantity: 260,
-      title: "Total Members",
+      quantity: 160,
+      title: "InComplete Members",
       logo: <FiUsers />,
     },
     {
       index: 7,
-      quantity: 260,
-      title: "Total Members",
+      quantity: 150,
+      title: "Verified Members",
       logo: <FiUsers />,
     },
     {
       index: 8,
-      quantity: 260,
-      title: "Total Members",
+      quantity: 190,
+      title: "Shaadi Members",
       logo: <FiUsers />,
     },
   ];
 
   return (
     <>
-      <div className="bg-amber-50 py-6 m-4 p-4 rounded-md shadow-md">
+      <div className="bg-stone-100 py-6 m-4 p-4 rounded-md shadow-md">
         <div className="grid grid-cols-4 gap-4">
           {data.map((item) => (
             <div
