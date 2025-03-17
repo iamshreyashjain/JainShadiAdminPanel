@@ -7,8 +7,8 @@ export default function Header() {
       {/* Background Image */}
       <img
         src={bg_header}
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-20"     
-        />
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-20"
+      />
 
       {/* Logo Image */}
       <div className="relative z-10 flex w-full justify-between items-center px-4">
