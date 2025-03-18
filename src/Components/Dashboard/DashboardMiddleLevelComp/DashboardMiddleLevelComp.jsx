@@ -7,25 +7,25 @@ export default function DashboardMiddleLevelComp() {
   const data = [
     {
       index: 1,
-      amount: 0.00,
+      amount: 0.0,
       title: "Total Earnings",
       logo: <TbReceiptRupee />,
     },
     {
       index: 2,
-      amount: 0.00,
+      amount: 0.0,
       title: "Last Month Earnings",
       logo: <TbReceiptRupee />,
     },
     {
       index: 3,
-      amount: 0.00,
+      amount: 0.0,
       title: "Last 6 Months Earnings",
       logo: <TbReceiptRupee />,
     },
     {
       index: 4,
-      amount: 0.00,
+      amount: 0.0,
       title: "Last 12 Months Earnings",
       logo: <TbReceiptRupee />,
     },
@@ -34,10 +34,10 @@ export default function DashboardMiddleLevelComp() {
   return (
     <>
       <div className="grid grid-cols-2 gap-4">
-      {/* For GRAPH */}
+        {/* For GRAPH */}
         <div></div>
         <div className=" bg-stone-100 rounded-md shadow-md p-4">
-          <DashboardMiddleChilds data ={data}/>
+          <DashboardMiddleChilds data={data} />
         </div>
       </div>
     </>

@@ -1,6 +1,5 @@
 import { FiUsers } from "react-icons/fi";
 
-
 import DashboardTopLevelCompChild from "./DashboardTopLevelCompChild/DashboardTopLevelCompChild.jsx";
 
 export default function DashboardTopLevelComp() {
@@ -58,7 +57,7 @@ export default function DashboardTopLevelComp() {
   return (
     <>
       <div className="bg-stone-100 py-6 m-4 p-4 rounded-md shadow-md">
-       <DashboardTopLevelCompChild data={data}/>
+        <DashboardTopLevelCompChild data={data} />
       </div>
     </>
   );
