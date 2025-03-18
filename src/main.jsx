@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import Home from "./Components/Home/Home.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import ProtectedRoute from "./Components/ProtectedRoutes/ProtectedRoute.jsx";
-import { Members } from "./Components/Members/Members.jsx";
+
 import { PremiumPackages } from "./Components/PremiumPackages/PremiumPackages.jsx";
 import { PackagePayments } from "./Components/PackagePayments/PackagePayments.jsx";
 import { Wallet } from "./Components/Wallet/Wallet.jsx";
@@ -17,6 +17,7 @@ import { WebsiteSetup } from "./Components/WebsiteSetup/WebsiteSetup.jsx";
 import { Settings } from "./Components/Settings/Settings.jsx";
 import { Staffs } from "./Components/Staffs/Staffs.jsx";
 import { System } from "./Components/System/System.jsx";
+import Members from "./Components/Members/Members.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
