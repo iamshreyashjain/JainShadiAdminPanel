@@ -27,7 +27,8 @@ function Members() {
       profileReported: 0,
       memberSince: "2021-09-01",
       memberStatus: "Unactive",
-    }, {
+    },
+    {
       key: 3,
       id: 2065376,
       userCode: 122113,
@@ -76,22 +77,29 @@ function Members() {
                 <td className="p-2 ">{item.userCode}</td>
                 <td className="p-2 ">{item.name}</td>
                 <td className="p-2 ">
-                  <img src={item.img} alt="Profile" className="w-10 h-10 rounded-md mx-auto" />
+                  <img
+                    src={item.img}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-md mx-auto"
+                  />
                 </td>
                 <td className="p-2 ">{item.gender}</td>
                 <td className="p-2 ">{item.profileReported}</td>
                 <td className="p-2 ">{item.memberSince}</td>
                 <td>
-
                   <button
-                    className={`px-2 py-1  font-light text-white min-w-24  rounded-lg ${item.memberStatus === "Active" ? "bg-green-600" : "bg-orange-600"
-                      }`}
+                    className={`px-2 py-1  font-light text-white min-w-24  rounded-lg ${
+                      item.memberStatus === "Active"
+                        ? "bg-green-600"
+                        : "bg-orange-600"
+                    }`}
                   >
                     {item.memberStatus}
                   </button>
                 </td>
                 <td className="p-2 ">
-                  <button className="" onClick={(e) => (e.preventDefault())}><PiDotsThreeOutlineVertical size={20} />
+                  <button className="" onClick={(e) => e.preventDefault()}>
+                    <PiDotsThreeOutlineVertical size={20} />
                   </button>
                 </td>
               </tr>
