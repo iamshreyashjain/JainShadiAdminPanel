@@ -5,14 +5,12 @@ import DashboardEndLevelComp from "./DashboardEndLevelComp/DashboardEndLevelComp
 import DashboardMiddleLevelComp from "./DashboardMiddleLevelComp/DashboardMiddleLevelComp";
 
 export default function Dashboard() {
-  
-
   return (
     <>
-      <DashboardTitle/>
+      <DashboardTitle />
       <DashboardTopLevelComp />
-      <DashboardMiddleLevelComp/>
-      <DashboardEndLevelComp/>
+      <DashboardMiddleLevelComp />
+      <DashboardEndLevelComp />
     </>
   );
 }
