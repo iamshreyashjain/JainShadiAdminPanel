@@ -1,6 +1,7 @@
 import { IoSquare } from "react-icons/io5";
 
 export default function DashboardEndLevelComp() {
+  
   return (
     <>
       <div className="bg-stone-100 py-6  m-4 h-4/12 p-4 rounded-md shadow-md">
