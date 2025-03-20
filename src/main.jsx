@@ -17,7 +17,10 @@ import { WebsiteSetup } from "./Components/WebsiteSetup/WebsiteSetup.jsx";
 import { Settings } from "./Components/Settings/Settings.jsx";
 import { Staffs } from "./Components/Staffs/Staffs.jsx";
 import { System } from "./Components/System/System.jsx";
+
+//MEMBERS
 import Members from "./Components/Members/Members.jsx";
+import CreateMember from "./Components/Members/CreateMember/CreateMember.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -31,6 +34,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/home", element: <Dashboard /> },
       { path: "/home/members", element: <Members /> },
+      { path: "/home/members/createmember", element: <CreateMember /> },
       { path: "/home/premiumPackages", element: <PremiumPackages /> },
       { path: "/home/packagePayments", element: <PackagePayments /> },
       { path: "/home/wallet", element: <Wallet /> },
