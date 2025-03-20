@@ -6,6 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 import { CgSearch } from "react-icons/cg";
 import Pagination from "../Pagination";
+import { Link } from "react-router-dom";
 
 function Members() {
   const data = [
@@ -132,6 +133,8 @@ function Members() {
     },
   ];
 
+  const [search, setSearch] = useState("");
+
   const [currentData, setCurrentData] = useState(data);
   const [visibleDropdown, setVisibleDropdown] = useState(null);
 
@@ -143,15 +146,20 @@ function Members() {
     setVisibleDropdown(null);
   };
 
+  const handleChange = (e) =>{
+    e.preventDefault();
+    setSearch(e.target.value)
+  }
+
   return (
     <>
       <MembersTitle />
       <div className="flex justify-between items-center m-4">
         <span className="text-xl font-medium ">Free Members</span>
-        <button className="flex items-center bg-rose-900 text-white p-2 gap-2 rounded-md">
+        <Link to = "/home/members/createmember" className="flex items-center bg-rose-900 text-white p-2 gap-2 rounded-md">
           <BsPlusCircleDotted size={22} />
-          Add New Member
-        </button>
+           Add New Member
+        </Link>
       </div>
 
       <div className="overflow-x-auto m-4 rounded-2xl p-4 shadow-2xl">
@@ -161,8 +169,8 @@ function Members() {
             <IoIosArrowDown />
           </div>
 
-          <div className="flex p-2 bg-white drop-shadow-xl items-center w-4/12 justify-between my-4 rounded-md ">
-            <span className="text-sm text-gray-900 font-thin">Search</span>
+          <div className="flex  bg-white drop-shadow-xl items-center w-4/12 justify-between my-4 rounded-md ">
+            <input type="text" className="text-sm text-gray-900 font-thin outline-0 flex-grow p-3 px-4" value={search} onChange={handleChange} placeholder="Search" />
             <CgSearch size={22} />
           </div>
         </div>
