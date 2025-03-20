@@ -185,21 +185,31 @@ function Members() {
 
           <tbody>
             {currentData.map((item, index) => (
-              <tr key={item.id} className="text-center border border-gray-300 text-sm">
+              <tr
+                key={item.id}
+                className="text-center border border-gray-300 text-sm"
+              >
                 <td className="p-2">{index + 1}</td>
                 <td className="p-2">{item.id}</td>
                 <td className="p-2">{item.userCode}</td>
                 <td className="p-2">{item.name}</td>
                 <td className="p-2">
-                  <img src={item.img} alt="Profile" className="w-10 h-10 rounded-md mx-auto" />
+                  <img
+                    src={item.img}
+                    alt="Profile"
+                    className="w-10 h-10 rounded-md mx-auto"
+                  />
                 </td>
                 <td className="p-2">{item.gender}</td>
                 <td className="p-2">{item.profileReported}</td>
                 <td className="p-2">{item.memberSince}</td>
                 <td>
                   <button
-                    className={`px-2 py-1 font-light text-white min-w-24 rounded-lg ${item.memberStatus === "Active" ? "bg-green-600" : "bg-orange-600"
-                      }`}
+                    className={`px-2 py-1 font-light text-white min-w-24 rounded-lg ${
+                      item.memberStatus === "Active"
+                        ? "bg-green-600"
+                        : "bg-orange-600"
+                    }`}
                   >
                     {item.memberStatus}
                   </button>
@@ -210,13 +220,22 @@ function Members() {
                     onMouseEnter={() => handleMouseEnter(item.id)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <PiDotsThreeOutlineVertical size={20} className="cursor-pointer" />
+                    <PiDotsThreeOutlineVertical
+                      size={20}
+                      className="cursor-pointer"
+                    />
                     {visibleDropdown === item.id && (
                       <div className="absolute right-0 w-32 bg-white border shadow-lg rounded-md z-10">
                         <ul className="py-2 text-sm text-gray-700">
-                          <li className=" hover:bg-gray-100 cursor-pointer">View</li>
-                          <li className=" hover:bg-gray-100 cursor-pointer">Edit</li>
-                          <li className=" hover:bg-gray-100 cursor-pointer">Block</li>
+                          <li className=" hover:bg-gray-100 cursor-pointer">
+                            View
+                          </li>
+                          <li className=" hover:bg-gray-100 cursor-pointer">
+                            Edit
+                          </li>
+                          <li className=" hover:bg-gray-100 cursor-pointer">
+                            Block
+                          </li>
                         </ul>
                       </div>
                     )}
@@ -226,8 +245,11 @@ function Members() {
             ))}
           </tbody>
         </table>
-        <Pagination data={data} itemsPerPage={10} onPageChange={setCurrentData} />
-
+        <Pagination
+          data={data}
+          itemsPerPage={10}
+          onPageChange={setCurrentData}
+        />
       </div>
     </>
   );
