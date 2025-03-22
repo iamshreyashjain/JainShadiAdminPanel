@@ -11,3 +11,26 @@ input[type="checkbox"]:checked {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
+/* Hide the default file input */
+input[type="file"] {
+  display: block;
+}
+
+/* Style the custom file input button */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #0056b3;
+}

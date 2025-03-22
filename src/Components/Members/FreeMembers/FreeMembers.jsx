@@ -1,14 +1,22 @@
+//react
 import { useState } from "react";
-import MembersTitle from "./MembersTitle/MembersTitle";
-import imgIcon from "../../assets/Images/imgIcon.png";
+import { Link } from "react-router-dom";
+
+//reUsable
+import MembersTitle from "./../MembersTitle/MembersTitle"
+
+//Img
+import imgIcon from "./../../../assets/Images/imgIcon.png"
+
+// reactIcons
 import { BsPlusCircleDotted } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 import { CgSearch } from "react-icons/cg";
-import Pagination from "../Pagination";
-import { Link } from "react-router-dom";
 
-function Members() {
+import Pagination from "../../ReusableComponents/Pagination/Pagination";
+
+export default  function FreeMembers() {
   const data = [
     {
       key: 1,
@@ -263,4 +271,4 @@ function Members() {
   );
 }
 
-export default Members;
+
