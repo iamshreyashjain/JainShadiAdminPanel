@@ -1,9 +1,9 @@
-import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle"
+import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
-export default function Religions(){
+export default function Religions() {
   return (
-   <>
-        <ProfileAttributesTitle/>
-   </>
-  )
+    <>
+      <ProfileAttributesTitle />
+    </>
+  );
 }

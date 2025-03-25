@@ -5,7 +5,6 @@ import bride from "./../assets/Images/bride.jpg";
 import couple1 from "./../assets/Images/couple1.jpg";
 import couple2 from "./../assets/Images/couple2.jpg";
 
-
 const data = [
   {
     key: 1,
@@ -19,10 +18,11 @@ const data = [
     profileReported: 2,
     memberSince: "2021-09-01",
     memberStatus: "Active",
-    reportedBy  : "Abhishek",
-    reportedReason : "Abusing",
-    shadiDoneUsers : couple2,
-    comments: "Want to thanks them, Really happy with my partner. The lovely partner i got just becuase of them I am really blessed"
+    reportedBy: "Abhishek",
+    reportedReason: "Abusing",
+    shadiDoneUsers: couple2,
+    comments:
+      "Want to thanks them, Really happy with my partner. The lovely partner i got just becuase of them I am really blessed",
   },
   {
     key: 2,
@@ -36,10 +36,10 @@ const data = [
     profileReported: 0,
     memberSince: "2021-09-01",
     memberStatus: "Unactive",
-    reportedBy  : "Lisa",
-    reportedReason : "Height choti hai",
-    shadiDoneUsers : couple2,
-    comments: "Want to thanks them, Really happy with my partner"
+    reportedBy: "Lisa",
+    reportedReason: "Height choti hai",
+    shadiDoneUsers: couple2,
+    comments: "Want to thanks them, Really happy with my partner",
   },
   {
     key: 3,
@@ -53,10 +53,10 @@ const data = [
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Active",
-    reportedBy  : "NA",
-    reportedReason : "Takla ho gaya hai",
-    shadiDoneUsers : couple1,
-    comments: "Want to thanks them, Really happy with my partner"
+    reportedBy: "NA",
+    reportedReason: "Takla ho gaya hai",
+    shadiDoneUsers: couple1,
+    comments: "Want to thanks them, Really happy with my partner",
   },
   {
     key: 4,
@@ -70,10 +70,10 @@ const data = [
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Unactive",
-    reportedBy  : "NA",
-    shadiDoneUsers : couple2,
-    reportedReason : "Salary kum hai",
-    comments: "Want to thanks them, Really happy with my partner"
+    reportedBy: "NA",
+    shadiDoneUsers: couple2,
+    reportedReason: "Salary kum hai",
+    comments: "Want to thanks them, Really happy with my partner",
   },
   {
     key: 5,
@@ -87,10 +87,10 @@ const data = [
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Active",
-    reportedBy  : "NA",
-    shadiDoneUsers : couple2,
-    reportedReason : "Gupt",
-    comments: "Jindagi barbaad ho gaye hai"
+    reportedBy: "NA",
+    shadiDoneUsers: couple2,
+    reportedReason: "Gupt",
+    comments: "Jindagi barbaad ho gaye hai",
   },
   {
     key: 6,
@@ -104,11 +104,10 @@ const data = [
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Unactive",
-    shadiDoneUsers : couple1,
-    reportedBy  : "NA",
-    reportedReason : "Fake Account",
-    comments: "Shadi karke ke fass gaya "
-
+    shadiDoneUsers: couple1,
+    reportedBy: "NA",
+    reportedReason: "Fake Account",
+    comments: "Shadi karke ke fass gaya ",
   },
   {
     key: 7,
@@ -122,10 +121,9 @@ const data = [
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Active",
-    reportedBy  : "NA",
-    reportedReason : "",
-    shadiDoneUsers : couple1,
-
+    reportedBy: "NA",
+    reportedReason: "",
+    shadiDoneUsers: couple1,
   },
   {
     key: 8,
@@ -138,9 +136,9 @@ const data = [
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
-    reportedBy  : "NA",
+    reportedBy: "NA",
     memberStatus: "Active",
-    shadiDoneUsers : couple2,
+    shadiDoneUsers: couple2,
   },
   {
     key: 9,
@@ -153,9 +151,9 @@ const data = [
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
-    reportedBy  : "NA",
+    reportedBy: "NA",
     memberStatus: "Unactive",
-    shadiDoneUsers : couple2,
+    shadiDoneUsers: couple2,
   },
   {
     key: 10,
@@ -168,8 +166,8 @@ const data = [
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
-    reportedBy  : "NA",
-    shadiDoneUsers : couple1,
+    reportedBy: "NA",
+    shadiDoneUsers: couple1,
     memberStatus: "Unactive",
   },
   {
@@ -183,8 +181,8 @@ const data = [
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
-    shadiDoneUsers : couple2,
-    reportedBy  : "NA",
+    shadiDoneUsers: couple2,
+    reportedBy: "NA",
     memberStatus: "Unactive",
   },
 ];

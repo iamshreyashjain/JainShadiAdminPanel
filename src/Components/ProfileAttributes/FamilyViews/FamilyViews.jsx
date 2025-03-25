@@ -1,9 +1,9 @@
-import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle"
+import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
-export default function FamilyViews(){
+export default function FamilyViews() {
   return (
-   <>
-        <ProfileAttributesTitle/>
-   </>
-  )
+    <>
+      <ProfileAttributesTitle />
+    </>
+  );
 }

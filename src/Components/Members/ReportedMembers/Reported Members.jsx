@@ -81,7 +81,7 @@ export default function ReportedMembers() {
               <th className="p-2 ">Name</th>
               <th className="p-2 ">Reported by</th>
               <th className="p-2 ">Reported Reason</th>
-            
+
               <th className="p-2 ">Options</th>
             </tr>
           </thead>
@@ -95,11 +95,7 @@ export default function ReportedMembers() {
                 <td className="p-2">{item?.name}</td>
                 <td className="p-2">{item?.reportedBy}</td>
                 <td className="p-2">{item?.reportedReason}</td>
-                
-                
-                
-                
-                
+
                 <td className="p-2 relative">
                   <div
                     className="inline-block"

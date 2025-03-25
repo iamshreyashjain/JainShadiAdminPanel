@@ -94,23 +94,27 @@ export default function UnapprovedProfilePictures() {
                 className="text-center border border-gray-300 text-sm"
               >
                 <td className="p-2 w-10">{index + 1}</td>
-                <td className="p-2"> 
-                <img className="mx-auto h-6/12 w-6/12 " src = {item?.shadiDoneUsers} alt= {item?.name } />
+                <td className="p-2">
+                  <img
+                    className="mx-auto h-6/12 w-6/12 "
+                    src={item?.shadiDoneUsers}
+                    alt={item?.name}
+                  />
                 </td>
                 <td className="p-2">{item?.name}</td>
                 <td className="p-2 text-balance w-3/12">{item?.comments}</td>
                 <td>
-                <button
-                  className={`px-2 py-1 font-light text-white min-w-24 rounded-lg ${
-                    item.memberStatus === "Active"
-                      ? "bg-green-600"
-                      : "bg-orange-600"
-                  }`}
-                >
-                  {item?.memberStatus}
-                </button>
-              </td>
-                
+                  <button
+                    className={`px-2 py-1 font-light text-white min-w-24 rounded-lg ${
+                      item.memberStatus === "Active"
+                        ? "bg-green-600"
+                        : "bg-orange-600"
+                    }`}
+                  >
+                    {item?.memberStatus}
+                  </button>
+                </td>
+
                 <td className="p-2 relative">
                   <div
                     className="inline-block"

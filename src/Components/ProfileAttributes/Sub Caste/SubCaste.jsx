@@ -1,9 +1,9 @@
-import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle"
+import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
-export default function SubCaste(){
+export default function SubCaste() {
   return (
-   <>
-        <ProfileAttributesTitle/>
-   </>
-  )
+    <>
+      <ProfileAttributesTitle />
+    </>
+  );
 }
