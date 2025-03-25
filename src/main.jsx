@@ -35,7 +35,6 @@ import CreateMember_RequestForCallArrange from "./Components/Members/CreateMembe
 import CreateMember_UnverifiedMemberList from "./Components/Members/CreateMember_UnverifiedMemberList/CreateMember_UnverifiedMemberList.jsx";
 import CreateMember_RequestForDeactivationAccount from "./Components/Members/CreateMember_RequestForCallArrange/CreateMember_RequestForDeactivationAccount.jsx";
 
-
 //Profile Attribute
 import Religions from "./Components/ProfileAttributes/Religions/Religions.jsx";
 import Caste from "./Components/ProfileAttributes/Caste/Caste.jsx";
@@ -48,8 +47,6 @@ import ProfileSection from "./Components/ProfileAttributes/ProfileSection/Profil
 import Set from "./Components/ProfileAttributes/Set/Set.jsx";
 import Subset from "./Components/ProfileAttributes/Subset/Subset.jsx";
 import Gotra from "./Components/ProfileAttributes/Gotra/Gotra.jsx";
-
-
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -93,7 +90,7 @@ const router = createBrowserRouter([
 
       //Shadi Done Users
       { path: "/home/members/shadiDoneUsers", element: <ShaadiDoneUsers /> },
-      
+
       //Request For Deactivation Account
       {
         path: "/home/members/requestForDeactivationAccount",
@@ -107,7 +104,10 @@ const router = createBrowserRouter([
       },
 
       //Unverified MemberList
-      { path: "/home/members/unverifiedMemberList", element: <UnverifiedMemberList /> },
+      {
+        path: "/home/members/unverifiedMemberList",
+        element: <UnverifiedMemberList />,
+      },
 
       // Create Member ->  Unverified MemberList
 
@@ -127,22 +127,29 @@ const router = createBrowserRouter([
         element: <CreateMember_RequestForCallArrange />,
       },
 
-
       // -------------------------------Profile Attribute-------------------------------
-      { path : "/home/profileAttribute/religions", element: <Religions/> } ,
-      { path : "/home/profileAttribute/caste", element: <Caste /> } ,
-      { path : "/home/profileAttribute/subCaste", element: <SubCaste/> } ,
-      { path : "/home/profileAttribute/membersLanguage", element: <MemberLanguage/> } ,
-      { path : "/home/profileAttribute/onBehalf", element: <OnBehalf/> } ,
-      { path : "/home/profileAttribute/familyViews", element: <FamilyViews/> } ,
-      { path : "/home/profileAttribute/familyStatus", element: <FamilyStatus/> } ,
-      { path : "/home/profileAttribute/profileSection", element: <ProfileSection/> } ,
-      { path : "/home/profileAttribute/set", element: <Set/> } ,
-      { path : "/home/profileAttribute/subset", element: <Subset/> } ,
-      { path : "/home/profileAttribute/gotra", element: <Gotra/> } ,
-      
+      { path: "/home/profileAttribute/religions", element: <Religions /> },
+      { path: "/home/profileAttribute/caste", element: <Caste /> },
+      { path: "/home/profileAttribute/subCaste", element: <SubCaste /> },
+      {
+        path: "/home/profileAttribute/membersLanguage",
+        element: <MemberLanguage />,
+      },
+      { path: "/home/profileAttribute/onBehalf", element: <OnBehalf /> },
+      { path: "/home/profileAttribute/familyViews", element: <FamilyViews /> },
+      {
+        path: "/home/profileAttribute/familyStatus",
+        element: <FamilyStatus />,
+      },
+      {
+        path: "/home/profileAttribute/profileSection",
+        element: <ProfileSection />,
+      },
+      { path: "/home/profileAttribute/set", element: <Set /> },
+      { path: "/home/profileAttribute/subset", element: <Subset /> },
+      { path: "/home/profileAttribute/gotra", element: <Gotra /> },
 
-            // -------------------------------Premium Packages-------------------------------
+      // -------------------------------Premium Packages-------------------------------
 
       { path: "/home/premiumPackages", element: <PremiumPackages /> },
       { path: "/home/packagePayments", element: <PackagePayments /> },

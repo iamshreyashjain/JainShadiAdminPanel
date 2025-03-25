@@ -56,7 +56,9 @@ export default function RequestForDeactivationAccount() {
     <>
       <MembersTitle />
       <div className="flex justify-between items-center m-4">
-        <span className="text-xl font-medium ">Request For Deactivation Account</span>
+        <span className="text-xl font-medium ">
+          Request For Deactivation Account
+        </span>
         <Link
           to="/home/members/createmember/requestForDeactivationAccount"
           className="flex items-center bg-rose-900 text-white p-2 gap-2 rounded-md"

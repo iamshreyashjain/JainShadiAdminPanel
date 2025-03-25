@@ -56,7 +56,9 @@ export default function UnapprovedProfilePictures() {
     <>
       <MembersTitle />
       <div className="flex justify-between items-center m-4">
-        <span className="text-xl font-medium my-2">Unapproved Profile Pictures </span>
+        <span className="text-xl font-medium my-2">
+          Unapproved Profile Pictures{" "}
+        </span>
       </div>
       <div className="overflow-x-auto m-4 rounded-2xl p-4 shadow-2xl">
         <div className="flex justify-between items-center ">
@@ -81,7 +83,7 @@ export default function UnapprovedProfilePictures() {
               <th className="p-2 ">S No.</th>
               <th className="p-2 ">Name</th>
               <th className="p-2 w-3/12">Image</th>
-              
+
               <th className="p-2 ">Options</th>
             </tr>
           </thead>
@@ -93,11 +95,14 @@ export default function UnapprovedProfilePictures() {
               >
                 <td className="p-2">{index + 1}</td>
                 <td className="p-2">{item?.name}</td>
-                 <td className="p-2"> 
-                <img className="mx-auto h-6/12 w-6/12 " src = {item?.img} alt= {item?.name } />
+                <td className="p-2">
+                  <img
+                    className="mx-auto h-6/12 w-6/12 "
+                    src={item?.img}
+                    alt={item?.name}
+                  />
                 </td>
-             
-                
+
                 <td className="p-2 relative">
                   <div
                     className="inline-block"
