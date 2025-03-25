@@ -1,7 +1,3 @@
-
-
-export default function UnapprovedProfilePictures(){
-  return (
-    <div>UnapprovedProfilePictures</div>
-  )
+export default function UnapprovedProfilePictures() {
+  return <div>UnapprovedProfilePictures</div>;
 }

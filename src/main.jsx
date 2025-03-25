@@ -44,27 +44,40 @@ const router = createBrowserRouter([
     ),
     children: [
       { path: "/home", element: <Dashboard /> },
-      
-      // -------------------------------Members-------------------------------  
-      //Free-Members : 
+
+      // -------------------------------Members-------------------------------
+      //Free-Members :
       { path: "/home/members", element: <FreeMembers /> },
-      { path: "/home/members/createmember/freemember", element: <CreateMember_FreeMemeber /> },
-      
-      //Premium-Members : 
+      {
+        path: "/home/members/createmember/freemember",
+        element: <CreateMember_FreeMemeber />,
+      },
+
+      //Premium-Members :
       { path: "/home/premiumMembers", element: <PremiumMembers /> },
-      { path: "/home/members/createmember/premiumMembers", element: <CreateMember_PremiumMemeber /> },
+      {
+        path: "/home/members/createmember/premiumMembers",
+        element: <CreateMember_PremiumMemeber />,
+      },
 
       { path: "/home/bulkMembers", element: <BulkMembers /> },
       { path: "/home/deletedMembers", element: <DeletedMembers /> },
       { path: "/home/reportedMembers", element: <ReportedMembers /> },
-      { path: "/home/unapprovedProfilePictures", element: <UnapprovedProfilePictures /> },
+      {
+        path: "/home/unapprovedProfilePictures",
+        element: <UnapprovedProfilePictures />,
+      },
       { path: "/home/shaadiDoneUsers", element: <ShaadiDoneUsers /> },
-      { path: "/home/requestForrDeactivationAccount", element: <RequestForDeactivationAccount /> },
+      {
+        path: "/home/requestForrDeactivationAccount",
+        element: <RequestForDeactivationAccount />,
+      },
       { path: "/home/unverifiedMemberList", element: <UnverifiedMemberList /> },
-      { path: "/home/requestForCallArrange", element: <RequestForCallArrange /> },
-      
+      {
+        path: "/home/requestForCallArrange",
+        element: <RequestForCallArrange />,
+      },
 
-     
       { path: "/home/premiumPackages", element: <PremiumPackages /> },
       { path: "/home/packagePayments", element: <PackagePayments /> },
       { path: "/home/wallet", element: <Wallet /> },

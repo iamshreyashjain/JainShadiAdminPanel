@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Pagination from "../../ReusableComponents/Pagination/Pagination";
 import MembersTitle from "../../ReusableComponents/MembersTitle/MembersTitle";
 
-import data from '../../../data/TableData'
+import data from "../../../data/TableData";
 import tableMenu from "../../../data/TableMenu";
 
 // reactIcons
@@ -15,37 +15,30 @@ import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 import { CgSearch } from "react-icons/cg";
 import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
 
-
-export default function PremiumMembers(){
+export default function PremiumMembers() {
   const [search, setSearch] = useState("");
   const [currentData, setCurrentData] = useState(data);
   const [visibleDropdown, setVisibleDropdown] = useState(null);
-  const [tableMenuOption, settableMenuOption] = useState(tableMenu)
+  const [tableMenuOption, settableMenuOption] = useState(tableMenu);
 
-const handleAction =(action)=>{
-  if(action === tableMenu[0]){
-    console.log("View Clicked")
-  }
-  else if(action === tableMenu[1]){
-    console.log("Edit Clicked")
-  }
-  else if(action === tableMenu[2]){
-    console.log("Block Clicked")
-  }
-  else if(action === tableMenu[3]){
-    console.log("Package Clicked")
-  }
-  else if(action === tableMenu[4]){
-    console.log("Wallet Balance Clicked")
-  }
-  else if(action === tableMenu[5]){
-    console.log("Login as this Memeber Clicked")
-  }
-  else if(action === tableMenu[6]){
-    console.log("Deleted Clicked")
-  }
-  setVisibleDropdown(null)
-}
+  const handleAction = (action) => {
+    if (action === tableMenu[0]) {
+      console.log("View Clicked");
+    } else if (action === tableMenu[1]) {
+      console.log("Edit Clicked");
+    } else if (action === tableMenu[2]) {
+      console.log("Block Clicked");
+    } else if (action === tableMenu[3]) {
+      console.log("Package Clicked");
+    } else if (action === tableMenu[4]) {
+      console.log("Wallet Balance Clicked");
+    } else if (action === tableMenu[5]) {
+      console.log("Login as this Memeber Clicked");
+    } else if (action === tableMenu[6]) {
+      console.log("Deleted Clicked");
+    }
+    setVisibleDropdown(null);
+  };
 
   const handleMouseEnter = (id) => {
     setVisibleDropdown(id);
@@ -55,18 +48,21 @@ const handleAction =(action)=>{
     setVisibleDropdown(null);
   };
 
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     e.preventDefault();
-    setSearch(e.target.value)
-  }
+    setSearch(e.target.value);
+  };
   return (
     <>
-    <MembersTitle/>
-    <div className="flex justify-between items-center m-4">
+      <MembersTitle />
+      <div className="flex justify-between items-center m-4">
         <span className="text-xl font-medium ">Premium Members</span>
-        <Link to = "/home/members/createmember/premiumMembers" className="flex items-center bg-rose-900 text-white p-2 gap-2 rounded-md">
+        <Link
+          to="/home/members/createmember/premiumMembers"
+          className="flex items-center bg-rose-900 text-white p-2 gap-2 rounded-md"
+        >
           <BsPlusCircleDotted size={22} />
-           Add New Member
+          Add New Member
         </Link>
       </div>
       <div className="overflow-x-auto m-4 rounded-2xl p-4 shadow-2xl">
@@ -76,7 +72,13 @@ const handleAction =(action)=>{
             <IoIosArrowDown />
           </div>
           <div className="flex  bg-white drop-shadow-xl items-center w-4/12 justify-between my-4 rounded-md ">
-            <input type="text" className="text-sm text-gray-900 font-thin outline-0 flex-grow p-3 px-4" value={search} onChange={handleChange} placeholder="Search" />
+            <input
+              type="text"
+              className="text-sm text-gray-900 font-thin outline-0 flex-grow p-3 px-4"
+              value={search}
+              onChange={handleChange}
+              placeholder="Search"
+            />
             <CgSearch size={22} />
           </div>
         </div>
@@ -128,7 +130,10 @@ const handleAction =(action)=>{
                     />
                     {visibleDropdown === item?.id && (
                       <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
-                        <TableMenu item={tableMenuOption} onItemClick={handleAction}/>
+                        <TableMenu
+                          item={tableMenuOption}
+                          onItemClick={handleAction}
+                        />
                       </div>
                     )}
                   </div>
@@ -144,5 +149,5 @@ const handleAction =(action)=>{
         />
       </div>
     </>
-  )
+  );
 }
