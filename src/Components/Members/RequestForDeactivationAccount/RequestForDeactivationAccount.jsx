@@ -1,6 +1,3 @@
-
-export default function RequestForDeactivationAccount(){
-  return (
-    <div>RequestForDeactivationAccount</div>
-  )
+export default function RequestForDeactivationAccount() {
+  return <div>RequestForDeactivationAccount</div>;
 }

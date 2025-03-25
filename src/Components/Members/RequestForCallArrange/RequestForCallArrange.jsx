@@ -1,6 +1,3 @@
-
-export default function RequestForCallArrange(){
-  return (
-    <div>RequestForCallArrange</div>
-  )
+export default function RequestForCallArrange() {
+  return <div>RequestForCallArrange</div>;
 }

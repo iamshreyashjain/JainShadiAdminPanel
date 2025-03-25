@@ -1,5 +1,7 @@
-   {/* Logic:: When SUBMENU is true, means when submenu do exists in any particular module and after 
-              && means we're setting hoverIndex, the value of index such that the both matches and the pop up works  */}
+{
+  /* Logic:: When SUBMENU is true, means when submenu do exists in any particular module and after 
+              && means we're setting hoverIndex, the value of index such that the both matches and the pop up works  */
+}
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -36,11 +38,27 @@ export default function Sidebar() {
         { key: 3, name: "Bulk Member Add", link: "/home/bulkMembers" },
         { key: 4, name: "Deleted Members", link: "/home/deletedMembers" },
         { key: 5, name: "Reported Members", link: "/home/reportedMembers" },
-        { key: 6, name: "Unapproved Profile Pictures", link: "/home/unapprovedProfilePictures" },
+        {
+          key: 6,
+          name: "Unapproved Profile Pictures",
+          link: "/home/unapprovedProfilePictures",
+        },
         { key: 7, name: "Shaadi Done Users", link: "/home/shaadiDoneUsers" },
-        { key: 8, name: "Request For Deactivation Account", link: "/home/requestForrDeactivationAccount" },
-        { key: 9, name: "Unverified Member List", link: "/home/unverifiedMemberList" },
-        { key: 10, name: "Request For Call Arrange", link: "/home/requestForCallArrange" },
+        {
+          key: 8,
+          name: "Request For Deactivation Account",
+          link: "/home/requestForrDeactivationAccount",
+        },
+        {
+          key: 9,
+          name: "Unverified Member List",
+          link: "/home/unverifiedMemberList",
+        },
+        {
+          key: 10,
+          name: "Request For Call Arrange",
+          link: "/home/requestForCallArrange",
+        },
       ],
     },
     {
