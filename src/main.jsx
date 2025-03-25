@@ -19,7 +19,7 @@ import { Staffs } from "./Components/Staffs/Staffs.jsx";
 import { System } from "./Components/System/System.jsx";
 
 //MEMBERS
-import CreateMember from "./Components/Members/CreateMember/CreateMember.jsx";
+import CreateMember from "./Components/Members/CreateMember_FreeMemeber/CreateMember_FreeMemeber.jsx";
 import FreeMembers from "./Components/Members/FreeMembers/FreeMembers.jsx";
 import PremiumMembers from "./Components/Members/PremiumMembers/PremiumMembers.jsx";
 import DeletedMembers from "./Components/Members/DeletedMembers/DeletedMembers.jsx";
@@ -30,6 +30,8 @@ import UnverifiedMemberList from "./Components/Members/UnverifiedMemberList/Unve
 import RequestForCallArrange from "./Components/Members/RequestForCallArrange/RequestForCallArrange.jsx";
 import BulkMembers from "./Components/Members/BulkMemberAdd/BulkMemberAdd.jsx";
 import ShaadiDoneUsers from "./Components/Members/ShaadiDoneUsers/ShaadiDoneUsers.jsx";
+import CreateMember_FreeMemeber from "./Components/Members/CreateMember_FreeMemeber/CreateMember_FreeMemeber.jsx";
+import CreateMember_PremiumMemeber from "./Components/Members/CreateMember_PremiumMemeber/CreateMember_PremiumMemeber.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -42,8 +44,16 @@ const router = createBrowserRouter([
     ),
     children: [
       { path: "/home", element: <Dashboard /> },
+      
+      // -------------------------------Members-------------------------------  
+      //Free-Members : 
       { path: "/home/members", element: <FreeMembers /> },
+      { path: "/home/members/createmember/freemember", element: <CreateMember_FreeMemeber /> },
+      
+      //Premium-Members : 
       { path: "/home/premiumMembers", element: <PremiumMembers /> },
+      { path: "/home/members/createmember/premiumMembers", element: <CreateMember_PremiumMemeber /> },
+
       { path: "/home/bulkMembers", element: <BulkMembers /> },
       { path: "/home/deletedMembers", element: <DeletedMembers /> },
       { path: "/home/reportedMembers", element: <ReportedMembers /> },
@@ -52,8 +62,9 @@ const router = createBrowserRouter([
       { path: "/home/requestForrDeactivationAccount", element: <RequestForDeactivationAccount /> },
       { path: "/home/unverifiedMemberList", element: <UnverifiedMemberList /> },
       { path: "/home/requestForCallArrange", element: <RequestForCallArrange /> },
+      
 
-      { path: "/home/members/createmember", element: <CreateMember /> },
+     
       { path: "/home/premiumPackages", element: <PremiumPackages /> },
       { path: "/home/packagePayments", element: <PackagePayments /> },
       { path: "/home/wallet", element: <Wallet /> },

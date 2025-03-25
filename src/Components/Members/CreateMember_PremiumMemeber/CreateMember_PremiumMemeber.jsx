@@ -19,7 +19,7 @@ import onBehalfDropDown from "../../../data/dropDown/onBehalfDropDown.js";
 import packagesDropDown from "../../../data/dropDown/packageDropDown.js";
 
 //Component
-export default function CreateMember() {
+export default function CreateMember_PremiumMemeber() {
     //Schema-FORM
     const [defaultFormData, setdefaultFormData] = useState({
         firstName: "",
@@ -111,7 +111,7 @@ export default function CreateMember() {
         // {/* Form body: STARTS FROM HERE  */}
         <>
             <div className="m-4 rounded-2xl shadow-2xl bg-stone-100 ">
-            <Link to ="/home/members" className="absolute right-10 top-25  float-right">
+            <Link to ="/home/premiumMembers" className="absolute right-10 top-25  float-right">
                 <RxCross2 size={25} className="hover:shadow-md rounded-full font-bold"/>
             </Link>
 
@@ -336,7 +336,7 @@ export default function CreateMember() {
                     <div></div>
                     {/* SUBMIT BUTTON */}
                     <div>
-                        <Link to= "/home/members" type="submit" className="bg-rose-900 text-white py-2 px-8 rounded-md">Add Member</Link>
+                        <Link to= "/home/premiumMembers" type="submit" className="bg-rose-900 text-white py-2 px-8 rounded-md">Add Member</Link>
                     </div>
                 </div>
            

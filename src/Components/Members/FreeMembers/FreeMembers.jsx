@@ -2,149 +2,50 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-//reUsable
-import MembersTitle from "./../MembersTitle/MembersTitle"
+import Pagination from "../../ReusableComponents/Pagination/Pagination";
+import MembersTitle from "../../ReusableComponents/MembersTitle/MembersTitle";
 
-//Img
-import imgIcon from "./../../../assets/Images/imgIcon.png"
+import data from '../../../data/TableData'
+import tableMenu from "../../../data/TableMenu";
 
 // reactIcons
 import { BsPlusCircleDotted } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 import { CgSearch } from "react-icons/cg";
+import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
 
-import Pagination from "../../ReusableComponents/Pagination/Pagination";
 
-export default  function FreeMembers() {
-  const data = [
-    {
-      key: 1,
-      id: 2065376,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 2,
-      memberSince: "2021-09-01",
-      memberStatus: "Active",
-    },
-    {
-      key: 2,
-      id: 2065372,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 0,
-      memberSince: "2021-09-01",
-      memberStatus: "Unactive",
-    },
-    {
-      key: 3,
-      id: 2065379,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Active",
-    },
-    {
-      key: 4,
-      id: 4065379,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Unactive",
-    },
-    {
-      key: 5,
-      id: 6065379,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Active",
-    },
-    {
-      key: 6,
-      id: 5065379,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Unactive",
-    },
-    {
-      key: 7,
-      id: 1065379,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Active",
-    },
-    {
-      key: 8,
-      id: 8065379,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Active",
-    },
-    {
-      key: 9,
-      id: 2965379,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Unactive",
-    },
-    {
-      key: 10,
-      id: 2065479,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Unactive",
-    },
-    {
-      key: 11,
-      id: 2065479,
-      userCode: 122113,
-      name: "John Doe",
-      img: imgIcon,
-      gender: "Male",
-      profileReported: 5,
-      memberSince: "2021-09-01",
-      memberStatus: "Unactive",
-    },
-  ];
-
+export default function PremiumMembers() {
   const [search, setSearch] = useState("");
-
   const [currentData, setCurrentData] = useState(data);
   const [visibleDropdown, setVisibleDropdown] = useState(null);
+  const [tableMenuOption, settableMenuOption] = useState(tableMenu)
+
+  const handleAction = (action) => {
+    if (action === tableMenu[0]) {
+      console.log("View Clicked")
+    }
+    else if (action === tableMenu[1]) {
+      console.log("Edit Clicked")
+    }
+    else if (action === tableMenu[2]) {
+      console.log("Block Clicked")
+    }
+    else if (action === tableMenu[3]) {
+      console.log("Package Clicked")
+    }
+    else if (action === tableMenu[4]) {
+      console.log("Wallet Balance Clicked")
+    }
+    else if (action === tableMenu[5]) {
+      console.log("Login as this Memeber Clicked")
+    }
+    else if (action === tableMenu[6]) {
+      console.log("Deleted Clicked")
+    }
+    setVisibleDropdown(null)
+  }
 
   const handleMouseEnter = (id) => {
     setVisibleDropdown(id);
@@ -154,43 +55,37 @@ export default  function FreeMembers() {
     setVisibleDropdown(null);
   };
 
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     e.preventDefault();
     setSearch(e.target.value)
   }
-
   return (
     <>
       <MembersTitle />
       <div className="flex justify-between items-center m-4">
         <span className="text-xl font-medium ">Free Members</span>
-        <Link to = "/home/members/createmember" className="flex items-center bg-rose-900 text-white p-2 gap-2 rounded-md">
+        <Link to="/home/members/createmember/freemember" className="flex items-center bg-rose-900 text-white p-2 gap-2 rounded-md">
           <BsPlusCircleDotted size={22} />
-           Add New Member
+          Add New Member
         </Link>
       </div>
-
       <div className="overflow-x-auto m-4 rounded-2xl p-4 shadow-2xl">
         <div className="flex justify-between items-center ">
           <div className="flex p-2 bg-white border border-gray-300 items-center w-32 justify-between my-4 rounded-md ">
             <span>All</span>
             <IoIosArrowDown />
           </div>
-
           <div className="flex  bg-white drop-shadow-xl items-center w-4/12 justify-between my-4 rounded-md ">
             <input type="text" className="text-sm text-gray-900 font-thin outline-0 flex-grow p-3 px-4" value={search} onChange={handleChange} placeholder="Search" />
             <CgSearch size={22} />
           </div>
         </div>
-
         <table className="table-auto w-full">
           <thead className="text-gray-700">
             <tr className="text-center text-sm bg-stone-100 border border-gray-300 border-b-0">
-              <th className="p-2 "></th>
-              <th className="p-2 ">ID</th>
+              <th className="p-2 ">S No.</th>
               <th className="p-2 ">User Code</th>
               <th className="p-2 ">Name</th>
-              <th className="p-2 ">Image</th>
               <th className="p-2 ">Gender</th>
               <th className="p-2 ">Profile Reported</th>
               <th className="p-2 ">Member Since</th>
@@ -198,7 +93,6 @@ export default  function FreeMembers() {
               <th className="p-2 ">Options</th>
             </tr>
           </thead>
-
           <tbody>
             {currentData.map((item, index) => (
               <tr
@@ -206,53 +100,35 @@ export default  function FreeMembers() {
                 className="text-center border border-gray-300 text-sm"
               >
                 <td className="p-2">{index + 1}</td>
-                <td className="p-2">{item.id}</td>
-                <td className="p-2">{item.userCode}</td>
-                <td className="p-2">{item.name}</td>
-                <td className="p-2">
-                  <img
-                    src={item.img}
-                    alt="Profile"
-                    className="w-10 h-10 rounded-md mx-auto"
-                  />
-                </td>
-                <td className="p-2">{item.gender}</td>
-                <td className="p-2">{item.profileReported}</td>
-                <td className="p-2">{item.memberSince}</td>
+                <td className="p-2">{item?.userCode}</td>
+                <td className="p-2">{item?.name}</td>
+                <td className="p-2">{item?.gender}</td>
+                <td className="p-2">{item?.profileReported}</td>
+
+                <td className="p-2">{item?.memberSince}</td>
                 <td>
                   <button
-                    className={`px-2 py-1 font-light text-white min-w-24 rounded-lg ${
-                      item.memberStatus === "Active"
+                    className={`px-2 py-1 font-light text-white min-w-24 rounded-lg ${item.memberStatus === "Active"
                         ? "bg-green-600"
                         : "bg-orange-600"
-                    }`}
+                      }`}
                   >
-                    {item.memberStatus}
+                    {item?.memberStatus}
                   </button>
                 </td>
                 <td className="p-2 relative">
                   <div
                     className="inline-block"
-                    onMouseEnter={() => handleMouseEnter(item.id)}
+                    onMouseEnter={() => handleMouseEnter(item?.id)}
                     onMouseLeave={handleMouseLeave}
                   >
                     <PiDotsThreeOutlineVertical
                       size={20}
                       className="cursor-pointer"
                     />
-                    {visibleDropdown === item.id && (
-                      <div className="absolute right-0 w-32 bg-white border shadow-lg rounded-md z-10">
-                        <ul className="py-2 text-sm text-gray-700">
-                          <li className=" hover:bg-gray-100 cursor-pointer">
-                            View
-                          </li>
-                          <li className=" hover:bg-gray-100 cursor-pointer">
-                            Edit
-                          </li>
-                          <li className=" hover:bg-gray-100 cursor-pointer">
-                            Block
-                          </li>
-                        </ul>
+                    {visibleDropdown === item?.id && (
+                      <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
+                        <TableMenu item={tableMenuOption} onItemClick={handleAction} />
                       </div>
                     )}
                   </div>
@@ -268,7 +144,5 @@ export default  function FreeMembers() {
         />
       </div>
     </>
-  );
+  )
 }
-
-

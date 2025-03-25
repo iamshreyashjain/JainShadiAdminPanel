@@ -1,3 +1,5 @@
+   {/* Logic:: When SUBMENU is true, means when submenu do exists in any particular module and after 
+              && means we're setting hoverIndex, the value of index such that the both matches and the pop up works  */}
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -126,14 +128,13 @@ export default function Sidebar() {
               {logo}
               {name}
             </Link>
-
             {subMenu && hoveredIndex === index && (
-              <ul className="absolute left-2 w-full  top-10 z-10 bg-stone-50 text-gray-900 shadow-lg rounded-lg  text-sm">
+              <ul className="absolute left-2 w-full top-10 z-10 bg-stone-50 text-gray-900 shadow-lg text-sm rounded-t-2xl">
                 {subMenu.map((sub, subIndex) => (
                   <li key={subIndex}>
                     <Link
                       to={sub.link}
-                      className="block hover:text-white hover:bg-rose-900 bg-stone-50 p-1 rounded-md "
+                      className="block hover:text-white hover:bg-rose-900 bg-stone-50 p-1 rounded-md rounded-b-none"
                     >
                       {sub.name}
                     </Link>
