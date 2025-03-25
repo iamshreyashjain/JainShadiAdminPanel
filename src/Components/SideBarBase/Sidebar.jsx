@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 // React Icons
 import { FaUserAlt } from "react-icons/fa";
 import { RiHome5Fill } from "react-icons/ri";
+import { FaRegIdCard } from "react-icons/fa";
 import { TiHome } from "react-icons/ti";
 import { IoMdCash, IoMdVolumeHigh } from "react-icons/io";
 import { IoWallet, IoCreateOutline, IoSettingsSharp } from "react-icons/io5";
@@ -30,35 +31,54 @@ export default function Sidebar() {
     {
       index: 2,
       name: "Members",
-      link: "/home/members",
+      link: "/home/members/freemembers",
       logo: <FaUserAlt />,
       subMenu: [
-        { key: 1, name: "Free Members", link: "/home/members" },
-        { key: 2, name: "Premium Members", link: "/home/premiumMembers" },
-        { key: 3, name: "Bulk Member Add", link: "/home/bulkMembers" },
-        { key: 4, name: "Deleted Members", link: "/home/deletedMembers" },
-        { key: 5, name: "Reported Members", link: "/home/reportedMembers" },
+        { key: 1, name: "Free Members", link: "/home/members/freemembers" },
+        { key: 2, name: "Premium Members", link: "/home/members/premiumMembers" },
+        { key: 3, name: "Bulk Member Add", link: "/home/members/bulkMembers" },
+        { key: 4, name: "Deleted Members", link: "/home/members/deletedMembers" },
+        { key: 5, name: "Reported Members", link: "/home/members/reportedMembers" },
         {
           key: 6,
           name: "Unapproved Profile Pictures",
-          link: "/home/unapprovedProfilePictures",
+          link: "/home/members/unapprovedProfilePictures",
         },
-        { key: 7, name: "Shaadi Done Users", link: "/home/shaadiDoneUsers" },
+        { key: 7, name: "Shadi Done Users", link: "/home/members/shadiDoneUsers" },
         {
           key: 8,
           name: "Request For Deactivation Account",
-          link: "/home/requestForrDeactivationAccount",
+          link: "/home/members/requestForDeactivationAccount",
         },
         {
           key: 9,
           name: "Unverified Member List",
-          link: "/home/unverifiedMemberList",
+          link: "/home/members/unverifiedMemberList",
         },
         {
           key: 10,
           name: "Request For Call Arrange",
-          link: "/home/requestForCallArrange",
+          link: "/home/members/requestForCallArrange",
         },
+      ],
+    },
+    {
+      index: 14,
+      name: "Profile Attributes",
+      link: "/home/profileAttribute/religions",
+      logo: <FaRegIdCard />,
+      subMenu: [
+        { key: 1, name: "Religions", link: "/home/profileAttribute/religions" },
+        { key: 2, name: "Caste", link: "/home/profileAttribute/caste" },
+        { key: 3, name: "Sub Caste", link: "/home/profileAttribute/subCaste" },
+        { key: 4, name: "Members Language", link: "/home/profileAttribute/membersLanguage" },
+        { key: 5, name: "On Behalf", link: "/home/profileAttribute/onBehalf" },
+        { key: 6, name: "Family Views", link: "/home/profileAttribute/familyViews"},
+        { key: 7, name: "Family Status", link: "/home/profileAttribute/familyStatus" },
+        { key: 8, name: "Profile Section", link: "/home/profileAttribute/profileSection"},
+        { key: 9, name: "Set",link: "/home/profileAttribute/set"},
+        { key: 10, name: "Subset", link: "/home/profileAttribute/subset"},
+        { key: 11, name: "Gotra", link: "/home/profileAttribute/gotra"},
       ],
     },
     {
