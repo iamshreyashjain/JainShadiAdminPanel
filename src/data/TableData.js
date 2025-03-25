@@ -1,5 +1,10 @@
 //Img
 import imgIcon from "./../assets/Images/imgIcon.png";
+import Groom from "./../assets/Images/Groom.jpg";
+import bride from "./../assets/Images/bride.jpg";
+import couple1 from "./../assets/Images/couple1.jpg";
+import couple2 from "./../assets/Images/couple2.jpg";
+
 
 const data = [
   {
@@ -7,91 +12,120 @@ const data = [
     id: 2065376,
     userCode: 122113,
     name: "Shreyash Jain",
-    img: imgIcon,
+    img: Groom,
     gender: "Male",
     membership: "Premium",
     ApprovalStatus: "True",
     profileReported: 2,
     memberSince: "2021-09-01",
     memberStatus: "Active",
+    reportedBy  : "Abhishek",
+    reportedReason : "Abusing",
+    shadiDoneUsers : couple2,
+    comments: "Want to thanks them, Really happy with my partner. The lovely partner i got just becuase of them I am really blessed"
   },
   {
     key: 2,
     id: 2065372,
     userCode: 122113,
     name: "Niraj thapa",
-    img: imgIcon,
+    img: Groom,
     gender: "Male",
     membership: "Premium",
     ApprovalStatus: "True",
     profileReported: 0,
     memberSince: "2021-09-01",
     memberStatus: "Unactive",
+    reportedBy  : "Lisa",
+    reportedReason : "Height choti hai",
+    shadiDoneUsers : couple2,
+    comments: "Want to thanks them, Really happy with my partner"
   },
   {
     key: 3,
     id: 2065379,
     userCode: 122113,
     name: "Raam Kukreja",
-    img: imgIcon,
+    img: Groom,
     gender: "Male",
     membership: "Premium",
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Active",
+    reportedBy  : "NA",
+    reportedReason : "Takla ho gaya hai",
+    shadiDoneUsers : couple1,
+    comments: "Want to thanks them, Really happy with my partner"
   },
   {
     key: 4,
     id: 4065379,
     userCode: 122113,
-    name: "Shreya Jain",
-    img: imgIcon,
+    name: "Savi Jain",
+    img: bride,
     gender: "Female",
     membership: "Premium",
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Unactive",
+    reportedBy  : "NA",
+    shadiDoneUsers : couple2,
+    reportedReason : "Salary kum hai",
+    comments: "Want to thanks them, Really happy with my partner"
   },
   {
     key: 5,
     id: 6065379,
     userCode: 122113,
     name: "Michael Doe",
-    img: imgIcon,
+    img: Groom,
     gender: "Male",
     membership: "Premium",
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Active",
+    reportedBy  : "NA",
+    shadiDoneUsers : couple2,
+    reportedReason : "Gupt",
+    comments: "Jindagi barbaad ho gaye hai"
   },
   {
     key: 6,
     id: 5065379,
     userCode: 122113,
     name: "Jaya Goswami",
-    img: imgIcon,
+    img: bride,
     gender: "Female",
     membership: "Premium",
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Unactive",
+    shadiDoneUsers : couple1,
+    reportedBy  : "NA",
+    reportedReason : "Fake Account",
+    comments: "Shadi karke ke fass gaya "
+
   },
   {
     key: 7,
     id: 1065379,
     userCode: 122113,
     name: "John Doe",
-    img: imgIcon,
+    img: Groom,
     gender: "Male",
     membership: "Free",
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
     memberStatus: "Active",
+    reportedBy  : "NA",
+    reportedReason : "",
+    shadiDoneUsers : couple1,
+
   },
   {
     key: 8,
@@ -104,7 +138,9 @@ const data = [
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
+    reportedBy  : "NA",
     memberStatus: "Active",
+    shadiDoneUsers : couple2,
   },
   {
     key: 9,
@@ -117,7 +153,9 @@ const data = [
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
+    reportedBy  : "NA",
     memberStatus: "Unactive",
+    shadiDoneUsers : couple2,
   },
   {
     key: 10,
@@ -130,6 +168,8 @@ const data = [
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
+    reportedBy  : "NA",
+    shadiDoneUsers : couple1,
     memberStatus: "Unactive",
   },
   {
@@ -143,6 +183,8 @@ const data = [
     ApprovalStatus: "True",
     profileReported: 5,
     memberSince: "2021-09-01",
+    shadiDoneUsers : couple2,
+    reportedBy  : "NA",
     memberStatus: "Unactive",
   },
 ];

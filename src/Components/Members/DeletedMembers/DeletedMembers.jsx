@@ -1,12 +1,11 @@
 //react
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 // reactIcons
-import { BsPlusCircleDotted } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 import { CgSearch } from "react-icons/cg";
+
 import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
 
 import data from "../../../data/TableData";
@@ -18,7 +17,7 @@ export default function DeletedMembers() {
   const [search, setSearch] = useState("");
   const [currentData, setCurrentData] = useState(data);
   const [visibleDropdown, setVisibleDropdown] = useState(null);
-  const [tableMenuOption, settableMenuOption] = useState(tableMenu);
+  const tableMenuOption = tableMenu;
 
   const handleAction = (action) => {
     if (action === tableMenu[0]) {

@@ -25,14 +25,14 @@ export default function BulkMembers() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="font-light">1</span>
+                <span className="font-light">2</span>
                 <span>
                   {" "}
                   Access the sample file to understand the data format.
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="font-light">1</span>
+                <span className="font-light">3</span>
                 <span>
                   {" "}
                   Download the skeleton file, fill it in, then upload and submit
@@ -58,11 +58,11 @@ export default function BulkMembers() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="font-light">1</span>
+                <span className="font-light">2</span>
                 <span>Use numeric IDs for Gender: Male = 1, Female = 2.</span>
               </li>
               <li className="flex gap-3">
-                <span className="font-light">1</span>
+                <span className="font-light">3</span>
                 <span>
                   {" "}
                   You can access the PDF to get the On Behalf ID and Package ID.
@@ -70,7 +70,7 @@ export default function BulkMembers() {
               </li>
 
               <li className="flex gap-3">
-                <span className="font-light">1</span>
+                <span className="font-light">4</span>
                 <span> Attach the country code to the phone number.</span>
               </li>
             </ul>

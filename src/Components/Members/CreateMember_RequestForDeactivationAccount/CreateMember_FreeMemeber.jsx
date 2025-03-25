@@ -114,7 +114,7 @@ export default function CreateMember_FreeMemeber() {
     <>
       <div className="m-4 rounded-2xl shadow-2xl bg-stone-100 ">
         <Link
-          to="/home/members/freemembers"
+          to="/home/members"
           className="absolute right-10 top-25  float-right"
         >
           <RxCross2
@@ -344,7 +344,7 @@ export default function CreateMember_FreeMemeber() {
               {/* SUBMIT BUTTON */}
               <div>
                 <Link
-                  to="/home/members/freemembers"
+                  to="/home/members"
                   type="submit"
                   className="bg-rose-900 text-white py-2 px-8 rounded-md"
                 >
