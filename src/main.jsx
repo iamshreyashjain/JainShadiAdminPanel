@@ -19,8 +19,19 @@ import { Staffs } from "./Components/Staffs/Staffs.jsx";
 import { System } from "./Components/System/System.jsx";
 
 //MEMBERS
-import Members from "./Components/Members/Members.jsx";
-import CreateMember from "./Components/Members/CreateMember/CreateMember.jsx";
+import CreateMember from "./Components/Members/CreateMember_FreeMemeber/CreateMember_FreeMemeber.jsx";
+import FreeMembers from "./Components/Members/FreeMembers/FreeMembers.jsx";
+import PremiumMembers from "./Components/Members/PremiumMembers/PremiumMembers.jsx";
+import DeletedMembers from "./Components/Members/DeletedMembers/DeletedMembers.jsx";
+import ReportedMembers from "./Components/Members/ReportedMembers/Reported Members.jsx";
+import UnapprovedProfilePictures from "./Components/Members/UnapprovedProfilePictures/UnapprovedProfilePictures.jsx";
+import RequestForDeactivationAccount from "./Components/Members/RequestForDeactivationAccount/RequestForDeactivationAccount.jsx";
+import UnverifiedMemberList from "./Components/Members/UnverifiedMemberList/UnverifiedMemberList.jsx";
+import RequestForCallArrange from "./Components/Members/RequestForCallArrange/RequestForCallArrange.jsx";
+import BulkMembers from "./Components/Members/BulkMemberAdd/BulkMemberAdd.jsx";
+import ShaadiDoneUsers from "./Components/Members/ShaadiDoneUsers/ShaadiDoneUsers.jsx";
+import CreateMember_FreeMemeber from "./Components/Members/CreateMember_FreeMemeber/CreateMember_FreeMemeber.jsx";
+import CreateMember_PremiumMemeber from "./Components/Members/CreateMember_PremiumMemeber/CreateMember_PremiumMemeber.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -33,8 +44,27 @@ const router = createBrowserRouter([
     ),
     children: [
       { path: "/home", element: <Dashboard /> },
-      { path: "/home/members", element: <Members /> },
-      { path: "/home/members/createmember", element: <CreateMember /> },
+      
+      // -------------------------------Members-------------------------------  
+      //Free-Members : 
+      { path: "/home/members", element: <FreeMembers /> },
+      { path: "/home/members/createmember/freemember", element: <CreateMember_FreeMemeber /> },
+      
+      //Premium-Members : 
+      { path: "/home/premiumMembers", element: <PremiumMembers /> },
+      { path: "/home/members/createmember/premiumMembers", element: <CreateMember_PremiumMemeber /> },
+
+      { path: "/home/bulkMembers", element: <BulkMembers /> },
+      { path: "/home/deletedMembers", element: <DeletedMembers /> },
+      { path: "/home/reportedMembers", element: <ReportedMembers /> },
+      { path: "/home/unapprovedProfilePictures", element: <UnapprovedProfilePictures /> },
+      { path: "/home/shaadiDoneUsers", element: <ShaadiDoneUsers /> },
+      { path: "/home/requestForrDeactivationAccount", element: <RequestForDeactivationAccount /> },
+      { path: "/home/unverifiedMemberList", element: <UnverifiedMemberList /> },
+      { path: "/home/requestForCallArrange", element: <RequestForCallArrange /> },
+      
+
+     
       { path: "/home/premiumPackages", element: <PremiumPackages /> },
       { path: "/home/packagePayments", element: <PackagePayments /> },
       { path: "/home/wallet", element: <Wallet /> },
@@ -44,7 +74,6 @@ const router = createBrowserRouter([
       { path: "/home/uploadedFiles", element: <UploadedFiles /> },
       { path: "/home/websiteSetup", element: <WebsiteSetup /> },
       { path: "/home/settings", element: <Settings /> },
-      { path: "/home/members", element: <Members /> },
       { path: "/home/staff", element: <Staffs /> },
       { path: "/home/system", element: <System /> },
     ],
