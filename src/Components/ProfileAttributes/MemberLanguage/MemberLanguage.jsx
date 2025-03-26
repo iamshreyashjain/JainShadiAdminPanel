@@ -1,7 +1,6 @@
 //react
 import { useState } from "react";
 
-
 //customData
 import data from "../../../data/TableData";
 import tableMenu from "../../../data/TableMenu";
@@ -16,8 +15,7 @@ import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
 export default function MemberLanguage() {
-  
-  const [memberLanguage, setmemberLanguage] = useState("")
+  const [memberLanguage, setmemberLanguage] = useState("");
   const [currentData] = useState(data);
   const [visibleDropdown, setVisibleDropdown] = useState(null);
   const [tableMenuOption] = useState(tableMenu);
@@ -49,14 +47,14 @@ export default function MemberLanguage() {
     setVisibleDropdown(null);
   };
 
-
-    //---------------------------> Member Languages <---------------------------
-    const [defaultTextmemberLanguage, setdefaultmemberLanguage] =
+  //---------------------------> Member Languages <---------------------------
+  const [defaultTextmemberLanguage, setdefaultmemberLanguage] =
     useState("Language Name");
-  const [isDropDownmemberLanguage, setisDropDownmemberLanguage] = useState(false);
+  const [isDropDownmemberLanguage, setisDropDownmemberLanguage] =
+    useState(false);
 
   const toggleDropDownPackage = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setisDropDownmemberLanguage(!isDropDownmemberLanguage);
   };
 
@@ -68,8 +66,6 @@ export default function MemberLanguage() {
       memberLanguage: updatedmemberLanguage,
     }));
   };
-
-    
 
   return (
     <>
@@ -88,8 +84,6 @@ export default function MemberLanguage() {
       <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6">
         {/*------------------------------ Parent ------------------------------*/}
         <div className="shadow-lg p-2 rounded-2xl">
-
-
           {/*------------------------------ {Drop-Down} ------------------------------*/}
 
           <div className="flex justify-between items-center ">
@@ -97,7 +91,6 @@ export default function MemberLanguage() {
               <span>All</span>
               <IoIosArrowDown />
             </div>
-
           </div>
 
           {/*------------------------------ {Table} ------------------------------*/}
@@ -114,7 +107,6 @@ export default function MemberLanguage() {
                   key={item.id}
                   className="text-center border border-gray-300 text-sm"
                 >
-
                   <td className="p-2">{item?.name}</td>
                   <td className="p-2 relative">
                     <div
@@ -140,7 +132,6 @@ export default function MemberLanguage() {
               ))}
             </tbody>
           </table>
-
         </div>
 
         {/*------------------------------Part - II------------------------------*/}
@@ -149,41 +140,39 @@ export default function MemberLanguage() {
           <div className="shadow-lg p-2 rounded-2xl ">
             <div className="font-semibold">Add New Member Language</div>
             <form>
-
               <label htmlFor="package" className="grid grid-cols-1 my-3">
-              Name
-              <div
-                className="relative"
-                onClick={toggleDropDownPackage}
-                onMouseLeave={() => setisDropDownmemberLanguage(false)}
-              >
-                <button
-                  className="mt-1 flex w-full items-center justify-between rounded-md bg-stone-100 text-stone-800 font-light border border-gray-300 p-2"
-                  id="genderDropDown"
+                Name
+                <div
+                  className="relative"
+                  onClick={toggleDropDownPackage}
+                  onMouseLeave={() => setisDropDownmemberLanguage(false)}
                 >
-                  {defaultTextmemberLanguage}
-                  <FaAngleDown className="ml-2 text-gray-400" />
-                </button>
-                {isDropDownmemberLanguage && (
-                  <div className="top-10 absolute w-full rounded-md border border-gray-300 bg-white">
-                    <ul className="text-sm text-gray-500">
-                      {languagesDropDown.map(({ key, value }) => (
-                        <li
-                          key={key}
-                          onClick={() => handlePackage(value)}
-                          className="block p-2  cursor-pointer hover:bg-stone-600 hover:text-white"
-                        >
-                          {value}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </label>
+                  <button
+                    className="mt-1 flex w-full items-center justify-between rounded-md bg-stone-100 text-stone-800 font-light border border-gray-300 p-2"
+                    id="genderDropDown"
+                  >
+                    {defaultTextmemberLanguage}
+                    <FaAngleDown className="ml-2 text-gray-400" />
+                  </button>
+                  {isDropDownmemberLanguage && (
+                    <div className="top-10 absolute w-full rounded-md border border-gray-300 bg-white">
+                      <ul className="text-sm text-gray-500">
+                        {languagesDropDown.map(({ key, value }) => (
+                          <li
+                            key={key}
+                            onClick={() => handlePackage(value)}
+                            className="block p-2  cursor-pointer hover:bg-stone-600 hover:text-white"
+                          >
+                            {value}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </label>
               <div className="flex items-end justify-end  mt-4">
                 <button
-
                   type="submit"
                   className=" bg-rose-900 text-white py-2 px-8 rounded-md"
                 >
@@ -191,7 +180,6 @@ export default function MemberLanguage() {
                 </button>
               </div>
             </form>
-
           </div>
         </div>
       </div>

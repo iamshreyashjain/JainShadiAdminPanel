@@ -24,8 +24,6 @@ const religionDropDown = [
     key: 6,
     value: "Bhudism",
   },
-  
-  
 ];
 
 export default religionDropDown;

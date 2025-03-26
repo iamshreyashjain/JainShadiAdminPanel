@@ -44,17 +44,16 @@ export default function OnBehalf() {
     setVisibleDropdown(null);
   };
 
-
   const handleChange = (e) => {
-    setonbehalf(e.target.value)
-  }
+    setonbehalf(e.target.value);
+  };
 
   return (
     <>
-    {/*------------------------------Heading------------------------------*/}
-    <ProfileAttributesTitle />
-    
-    {/*------------------------------SUB-Heading------------------------------*/}
+      {/*------------------------------Heading------------------------------*/}
+      <ProfileAttributesTitle />
+
+      {/*------------------------------SUB-Heading------------------------------*/}
       <div className="flex justify-between items-center m-4">
         <span className="text-xl font-medium my-2 ">On Behalves</span>
       </div>
@@ -66,8 +65,6 @@ export default function OnBehalf() {
       <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6">
         {/*------------------------------ Parent ------------------------------*/}
         <div className="shadow-lg p-2 rounded-2xl">
-
-
           {/*------------------------------ {Drop-Down} ------------------------------*/}
 
           <div className="flex justify-between items-center ">
@@ -75,14 +72,13 @@ export default function OnBehalf() {
               <span>All</span>
               <IoIosArrowDown />
             </div>
-
           </div>
 
           {/*------------------------------ {Table} ------------------------------*/}
           <table className="table-auto w-full ">
             <thead className="text-gray-700">
               <tr className="text-center text-sm bg-stone-100 border border-gray-300 border-b-0">
-              <th className=" w-12 ">S No</th>
+                <th className=" w-12 ">S No</th>
                 <th className="p-2 ">Name</th>
                 <th className="p-2 ">Options</th>
               </tr>
@@ -93,7 +89,7 @@ export default function OnBehalf() {
                   key={item.id}
                   className="text-center border border-gray-300 text-sm"
                 >
-                <td className="">{index + 1}</td>
+                  <td className="">{index + 1}</td>
                   <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
                     <div
@@ -119,7 +115,6 @@ export default function OnBehalf() {
               ))}
             </tbody>
           </table>
-
         </div>
 
         {/*------------------------------Part - II------------------------------*/}
@@ -141,7 +136,6 @@ export default function OnBehalf() {
               </label>
               <div className="flex items-end justify-end ">
                 <button
-
                   type="submit"
                   className=" bg-rose-900 text-white py-2 px-8 rounded-md"
                 >
@@ -149,7 +143,6 @@ export default function OnBehalf() {
                 </button>
               </div>
             </form>
-
           </div>
         </div>
       </div>

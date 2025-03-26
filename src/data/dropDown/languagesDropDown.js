@@ -24,8 +24,6 @@ const languagesDropDown = [
     key: 6,
     value: "Telugu",
   },
-  
-  
 ];
 
 export default languagesDropDown;

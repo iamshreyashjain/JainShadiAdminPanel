@@ -44,17 +44,16 @@ export default function Religions() {
     setVisibleDropdown(null);
   };
 
-
   const handleChange = (e) => {
-    setreligion(e.target.value)
-  }
+    setreligion(e.target.value);
+  };
 
   return (
     <>
-    {/*------------------------------Heading------------------------------*/}
-    <ProfileAttributesTitle />
-    
-    {/*------------------------------SUB-Heading------------------------------*/}
+      {/*------------------------------Heading------------------------------*/}
+      <ProfileAttributesTitle />
+
+      {/*------------------------------SUB-Heading------------------------------*/}
       <div className="flex justify-between items-center m-4">
         <span className="text-xl font-medium my-2 ">Religions</span>
       </div>
@@ -66,8 +65,6 @@ export default function Religions() {
       <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6">
         {/*------------------------------ Parent ------------------------------*/}
         <div className="shadow-lg p-2 rounded-2xl">
-
-
           {/*------------------------------ {Drop-Down} ------------------------------*/}
 
           <div className="flex justify-between items-center ">
@@ -75,7 +72,6 @@ export default function Religions() {
               <span>All</span>
               <IoIosArrowDown />
             </div>
-
           </div>
 
           {/*------------------------------ {Table} ------------------------------*/}
@@ -93,8 +89,7 @@ export default function Religions() {
                   key={item.id}
                   className="text-center border border-gray-300 text-sm"
                 >
-
-                <td className="">{index + 1}</td>
+                  <td className="">{index + 1}</td>
                   <td className="p-2">{item?.name}</td>
                   <td className="p-2 relative">
                     <div
@@ -120,7 +115,6 @@ export default function Religions() {
               ))}
             </tbody>
           </table>
-
         </div>
 
         {/*------------------------------Part - II------------------------------*/}
@@ -142,7 +136,6 @@ export default function Religions() {
               </label>
               <div className="flex items-end justify-end ">
                 <button
-
                   type="submit"
                   className=" bg-rose-900 text-white py-2 px-8 rounded-md"
                 >
@@ -150,7 +143,6 @@ export default function Religions() {
                 </button>
               </div>
             </form>
-
           </div>
         </div>
       </div>
