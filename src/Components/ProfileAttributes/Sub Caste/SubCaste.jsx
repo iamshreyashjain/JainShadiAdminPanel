@@ -1,7 +1,6 @@
 //react
 import { useState } from "react";
 
-
 //customData
 import data from "../../../data/TableData";
 import tableMenu from "../../../data/TableMenu";
@@ -16,11 +15,9 @@ import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
 export default function SubCaste() {
-
   const [defaultFormData, setdefaultFormData] = useState({
     religion: "",
     caste: "",
-
   });
   const [currentData] = useState(data);
   const [visibleDropdown, setVisibleDropdown] = useState(null);
@@ -53,14 +50,12 @@ export default function SubCaste() {
     setVisibleDropdown(null);
   };
 
-
   //---------------------------> Caste <---------------------------
-  const [defaultTextCaste, setdefaultTextCaste] =
-    useState("Caste Name");
+  const [defaultTextCaste, setdefaultTextCaste] = useState("Caste Name");
   const [isDropDownCaste, setisDropDownCaste] = useState(false);
 
   const toggleDropDownCaste = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setisDropDownCaste(!isDropDownCaste);
   };
 
@@ -78,7 +73,7 @@ export default function SubCaste() {
   const [isDropDownSubCaste, setisDropDownSubCaste] = useState(false);
 
   const toggleDropDownSubCaste = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setisDropDownSubCaste(!isDropDownCaste);
   };
 
@@ -116,8 +111,6 @@ export default function SubCaste() {
       <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6">
         {/*------------------------------ Parent ------------------------------*/}
         <div className="shadow-lg p-2 rounded-2xl">
-
-
           {/*------------------------------ {Drop-Down} ------------------------------*/}
 
           <div className="flex justify-between items-center ">
@@ -125,7 +118,6 @@ export default function SubCaste() {
               <span>All</span>
               <IoIosArrowDown />
             </div>
-
           </div>
 
           {/*------------------------------ {Table} ------------------------------*/}
@@ -142,7 +134,6 @@ export default function SubCaste() {
                   key={item.id}
                   className="text-center border border-gray-300 text-sm"
                 >
-
                   <td className="p-2">{item?.name}</td>
                   <td className="p-2 relative">
                     <div
@@ -168,7 +159,6 @@ export default function SubCaste() {
               ))}
             </tbody>
           </table>
-
         </div>
 
         {/*------------------------------Part - II------------------------------*/}
@@ -254,7 +244,6 @@ export default function SubCaste() {
               </label>
               <div className="flex items-end justify-end  mt-4">
                 <button
-
                   type="submit"
                   className=" bg-rose-900 text-white py-2 px-8 rounded-md"
                 >
@@ -262,7 +251,6 @@ export default function SubCaste() {
                 </button>
               </div>
             </form>
-
           </div>
         </div>
       </div>

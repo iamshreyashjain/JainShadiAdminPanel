@@ -1,7 +1,6 @@
 //react
 import { useState } from "react";
 
-
 //customData
 import data from "../../../data/TableData";
 import tableMenu from "../../../data/TableMenu";
@@ -16,11 +15,9 @@ import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
 export default function Caste() {
-  
   const [defaultFormData, setdefaultFormData] = useState({
     religion: "",
     caste: "",
-    
   });
   const [currentData] = useState(data);
   const [visibleDropdown, setVisibleDropdown] = useState(null);
@@ -53,14 +50,12 @@ export default function Caste() {
     setVisibleDropdown(null);
   };
 
-
-    //---------------------------> Caste <---------------------------
-    const [defaultTextCaste, setdefaultTextCaste] =
-    useState("Caste Name");
+  //---------------------------> Caste <---------------------------
+  const [defaultTextCaste, setdefaultTextCaste] = useState("Caste Name");
   const [isDropDownCaste, setisDropDownCaste] = useState(false);
 
   const toggleDropDownPackage = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setisDropDownCaste(!isDropDownCaste);
   };
 
@@ -73,13 +68,13 @@ export default function Caste() {
     }));
   };
 
-    //---------------------------> FORM <---------------------------
-    const handleChange = (e) => {
-      setdefaultFormData({
-        ...defaultFormData,
-        [e.target.name]: e.target.value,
-      });
-    };
+  //---------------------------> FORM <---------------------------
+  const handleChange = (e) => {
+    setdefaultFormData({
+      ...defaultFormData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <>
@@ -98,8 +93,6 @@ export default function Caste() {
       <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6">
         {/*------------------------------ Parent ------------------------------*/}
         <div className="shadow-lg p-2 rounded-2xl">
-
-
           {/*------------------------------ {Drop-Down} ------------------------------*/}
 
           <div className="flex justify-between items-center ">
@@ -107,7 +100,6 @@ export default function Caste() {
               <span>All</span>
               <IoIosArrowDown />
             </div>
-
           </div>
 
           {/*------------------------------ {Table} ------------------------------*/}
@@ -124,7 +116,6 @@ export default function Caste() {
                   key={item.id}
                   className="text-center border border-gray-300 text-sm"
                 >
-
                   <td className="p-2">{item?.name}</td>
                   <td className="p-2 relative">
                     <div
@@ -150,7 +141,6 @@ export default function Caste() {
               ))}
             </tbody>
           </table>
-
         </div>
 
         {/*------------------------------Part - II------------------------------*/}
@@ -171,39 +161,38 @@ export default function Caste() {
                 />
               </label>
               <label htmlFor="package" className="grid grid-cols-1">
-              Caste Name
-              <div
-                className="relative"
-                onClick={toggleDropDownPackage}
-                onMouseLeave={() => setisDropDownCaste(false)}
-              >
-                <button
-                  className="mt-1 flex w-full items-center justify-between rounded-md bg-stone-100 text-stone-800 font-light border border-gray-300 p-2"
-                  id="genderDropDown"
+                Caste Name
+                <div
+                  className="relative"
+                  onClick={toggleDropDownPackage}
+                  onMouseLeave={() => setisDropDownCaste(false)}
                 >
-                  {defaultTextCaste}
-                  <FaAngleDown className="ml-2 text-gray-400" />
-                </button>
-                {isDropDownCaste && (
-                  <div className="top-10 absolute w-full rounded-md border border-gray-300 bg-white">
-                    <ul className="text-sm text-gray-500">
-                      {religionDropDown.map(({ key, value }) => (
-                        <li
-                          key={key}
-                          onClick={() => handlePackage(value)}
-                          className="block p-2  cursor-pointer hover:bg-stone-600 hover:text-white"
-                        >
-                          {value}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </label>
+                  <button
+                    className="mt-1 flex w-full items-center justify-between rounded-md bg-stone-100 text-stone-800 font-light border border-gray-300 p-2"
+                    id="genderDropDown"
+                  >
+                    {defaultTextCaste}
+                    <FaAngleDown className="ml-2 text-gray-400" />
+                  </button>
+                  {isDropDownCaste && (
+                    <div className="top-10 absolute w-full rounded-md border border-gray-300 bg-white">
+                      <ul className="text-sm text-gray-500">
+                        {religionDropDown.map(({ key, value }) => (
+                          <li
+                            key={key}
+                            onClick={() => handlePackage(value)}
+                            className="block p-2  cursor-pointer hover:bg-stone-600 hover:text-white"
+                          >
+                            {value}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </label>
               <div className="flex items-end justify-end  mt-4">
                 <button
-
                   type="submit"
                   className=" bg-rose-900 text-white py-2 px-8 rounded-md"
                 >
@@ -211,7 +200,6 @@ export default function Caste() {
                 </button>
               </div>
             </form>
-
           </div>
         </div>
       </div>
