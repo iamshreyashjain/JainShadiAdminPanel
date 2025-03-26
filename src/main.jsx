@@ -41,7 +41,6 @@ import Caste from "./Components/ProfileAttributes/Caste/Caste.jsx";
 import SubCaste from "./Components/ProfileAttributes/Sub Caste/SubCaste.jsx";
 import MemberLanguage from "./Components/ProfileAttributes/MemberLanguage/MemberLanguage.jsx";
 import OnBehalf from "./Components/ProfileAttributes/OnBehalf/OnBehalf.jsx";
-import FamilyViews from "./Components/ProfileAttributes/FamilyViews/FamilyViews.jsx";
 import FamilyStatus from "./Components/ProfileAttributes/FamilyStatus/FamilyStatus.jsx";
 import ProfileSection from "./Components/ProfileAttributes/ProfileSection/ProfileSection.jsx";
 import Set from "./Components/ProfileAttributes/Set/Set.jsx";
@@ -136,7 +135,6 @@ const router = createBrowserRouter([
         element: <MemberLanguage />,
       },
       { path: "/home/profileAttribute/onBehalf", element: <OnBehalf /> },
-      { path: "/home/profileAttribute/familyViews", element: <FamilyViews /> },
       {
         path: "/home/profileAttribute/familyStatus",
         element: <FamilyStatus />,

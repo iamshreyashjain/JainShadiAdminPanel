@@ -94,11 +94,6 @@ export default function Sidebar() {
         },
         { key: 5, name: "On Behalf", link: "/home/profileAttribute/onBehalf" },
         {
-          key: 6,
-          name: "Family Views",
-          link: "/home/profileAttribute/familyViews",
-        },
-        {
           key: 7,
           name: "Family Status",
           link: "/home/profileAttribute/familyStatus",

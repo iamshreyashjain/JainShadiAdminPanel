@@ -1,7 +1,7 @@
 const packagesDropDown = [
   {
     key: 1,
-    value: "Free-Package",
+    value: "Free Package",
   },
   {
     key: 2,
