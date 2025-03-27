@@ -6,7 +6,7 @@ import Home from "./Components/Home/Home.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import ProtectedRoute from "./Components/ProtectedRoutes/ProtectedRoute.jsx";
 
-import { PremiumPackages } from "./Components/PremiumPackages/PremiumPackages.jsx";
+
 import { PackagePayments } from "./Components/PackagePayments/PackagePayments.jsx";
 import { Wallet } from "./Components/Wallet/Wallet.jsx";
 import { HappyStories } from "./Components/HappyStories/HappyStories.jsx";
@@ -34,6 +34,11 @@ import CreateMember_PremiumMemeber from "./Components/Members/CreateMember_Premi
 import CreateMember_RequestForCallArrange from "./Components/Members/CreateMember_RequestForCallArrange/CreateMember_RequestForDeactivationAccount.jsx";
 import CreateMember_UnverifiedMemberList from "./Components/Members/CreateMember_UnverifiedMemberList/CreateMember_UnverifiedMemberList.jsx";
 import CreateMember_RequestForDeactivationAccount from "./Components/Members/CreateMember_RequestForCallArrange/CreateMember_RequestForDeactivationAccount.jsx";
+
+
+//Premium Packages
+import PremiumPackages from "./Components/PremiumPackages/PremiumPackages.jsx";
+import Create_PremiumPackagesForm from "./Components/PremiumPackages/Create_PremiumPackagesForm/Create_PremiumPackagesForm.jsx";
 
 //Profile Attribute
 import Religions from "./Components/ProfileAttributes/Religions/Religions.jsx";
@@ -155,6 +160,8 @@ const router = createBrowserRouter([
       // -------------------------------Premium Packages-------------------------------
 
       { path: "/home/premiumPackages", element: <PremiumPackages /> },
+      { path: "/home/create/premiumPackages", element: <Create_PremiumPackagesForm /> },
+
       { path: "/home/packagePayments", element: <PackagePayments /> },
       { path: "/home/wallet", element: <Wallet /> },
       { path: "/home/happyStories", element: <HappyStories /> },
