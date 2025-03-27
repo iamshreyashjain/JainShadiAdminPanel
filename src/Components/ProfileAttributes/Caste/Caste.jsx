@@ -2,9 +2,8 @@
 import { useState } from "react";
 
 //customData
-import data from "../../../data/TableData";
-import tableMenu from "../../../data/TableMenu";
-import religionDropDown from "../../../data/dropDown/religionDropDown";
+import casteDropDown from "../../../data/dropDown/casteDropDown";
+
 
 // reactIcons
 import { FaAngleDown } from "react-icons/fa";
@@ -19,36 +18,8 @@ export default function Caste() {
     religion: "",
     caste: "",
   });
-  const [currentData] = useState(data);
-  const [visibleDropdown, setVisibleDropdown] = useState(null);
-  const [tableMenuOption] = useState(tableMenu);
 
-  const handleAction = (action) => {
-    if (action === tableMenu[0]) {
-      console.log("View Clicked");
-    } else if (action === tableMenu[1]) {
-      console.log("Edit Clicked");
-    } else if (action === tableMenu[2]) {
-      console.log("Block Clicked");
-    } else if (action === tableMenu[3]) {
-      console.log("Package Clicked");
-    } else if (action === tableMenu[4]) {
-      console.log("Wallet Balance Clicked");
-    } else if (action === tableMenu[5]) {
-      console.log("Login as this Memeber Clicked");
-    } else if (action === tableMenu[6]) {
-      console.log("Deleted Clicked");
-    }
-    setVisibleDropdown(null);
-  };
-
-  const handleMouseEnter = (id) => {
-    setVisibleDropdown(id);
-  };
-
-  const handleMouseLeave = () => {
-    setVisibleDropdown(null);
-  };
+  
 
   //---------------------------> Caste <---------------------------
   const [defaultTextCaste, setdefaultTextCaste] = useState("Caste Name");
@@ -90,7 +61,7 @@ export default function Caste() {
 
       {/* The Page is divided into two parts from here */}
       {/*------------------------------Part - I------------------------------*/}
-      <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6">
+      <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6 ">
         {/*------------------------------ Parent ------------------------------*/}
         <div className="shadow-lg p-2 rounded-2xl">
           {/*------------------------------ {Drop-Down} ------------------------------*/}
@@ -106,35 +77,29 @@ export default function Caste() {
           <table className="table-auto w-full ">
             <thead className="text-gray-700">
               <tr className="text-center text-sm bg-stone-100 border border-gray-300 border-b-0">
+              <th className=" w-12 ">S No</th>
                 <th className="p-2 ">Name</th>
                 <th className="p-2 ">Options</th>
               </tr>
             </thead>
             <tbody>
-              {currentData.map((item) => (
+              {casteDropDown.map((item) => (
                 <tr
-                  key={item.id}
+                  key={item.key}
                   className="text-center border border-gray-300 text-sm"
                 >
-                  <td className="p-2">{item?.name}</td>
+
+                  <td className="p-2">{item?.key}</td>
+                  <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
                     <div
                       className="inline-block"
-                      onMouseEnter={() => handleMouseEnter(item?.id)}
-                      onMouseLeave={handleMouseLeave}
+                      
                     >
                       <PiDotsThreeOutlineVertical
                         size={20}
                         className="cursor-pointer"
                       />
-                      {visibleDropdown === item?.id && (
-                        <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
-                          <TableMenu
-                            item={tableMenuOption}
-                            onItemClick={handleAction}
-                          />
-                        </div>
-                      )}
                     </div>
                   </td>
                 </tr>
@@ -146,7 +111,7 @@ export default function Caste() {
         {/*------------------------------Part - II------------------------------*/}
         {/*------------------------------The Form part will come here : An Input value, Add Button------------------------------*/}
         <div className="">
-          <div className="shadow-lg p-2 rounded-2xl ">
+          <div className="shadow-lg p-2 rounded-2xl h-12/12">
             <div className="font-semibold">Add New Caste</div>
             <form>
               <label className="flex flex-col  my-3">
@@ -176,12 +141,12 @@ export default function Caste() {
                   </button>
                   {isDropDownCaste && (
                     <div className="top-10 absolute w-full rounded-md border border-gray-300 bg-white">
-                      <ul className="text-sm text-gray-500">
-                        {religionDropDown.map(({ key, value }) => (
+                      <ul className="text-sm text-gray-500 h-32 overflow-x-scroll">
+                        {casteDropDown.map(({ key, value }) => (
                           <li
                             key={key}
                             onClick={() => handlePackage(value)}
-                            className="block p-2  cursor-pointer hover:bg-stone-600 hover:text-white"
+                            className="block p-2    cursor-pointer hover:bg-stone-600 hover:text-white"
                           >
                             {value}
                           </li>

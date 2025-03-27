@@ -10,20 +10,13 @@ import { IoIosArrowDown } from "react-icons/io";
 //Title
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
-export default function Gotra() {
-  const [form, setform] = useState({
-    set : "",
-    subset:  "",
-    gotra:  "",
-  });
+export default function MaritalStatuses() {
+  const [maritalStatuses, setmaritalStatuses] = useState("");
   const data = [];
-  //---------------------------> FORM <---------------------------
+
   const handleChange = (e) => {
-    setform({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
+    setmaritalStatuses(e.target.value);
+  }
   return (
     <>
       {/*------------------------------Heading------------------------------*/}
@@ -31,7 +24,7 @@ export default function Gotra() {
 
       {/*------------------------------SUB-Heading------------------------------*/}
       <div className="flex justify-between items-center m-4">
-        <span className="text-xl font-medium my-2 ">Subset</span>
+        <span className="text-xl font-medium my-2 ">Marital Statuses</span>
       </div>
 
       {/*------------------------------Division------------------------------*/}
@@ -92,39 +85,17 @@ export default function Gotra() {
         {/*------------------------------The Form part will come here : An Input value, Add Button------------------------------*/}
         <div className="">
           <div className="shadow-lg p-2 rounded-2xl ">
-            <div className="font-semibold">Add New Gotra</div>
+            <div className="font-semibold">Add New Marital Status</div>
             <form>
               <label className="flex flex-col  my-3">
-                <span className="text-md">Set Name</span>
+                <span className="text-md">Name</span>
                 <input
                   className="bg-stone-100 p-3 my-3 rounded-lg text-stone-800 font-light outline-0 w-full "
                   type="text"
-                  name="set"
-                  value={form.set}
+                  name="maritalStatuses"
+                  value={maritalStatuses}
                   onChange={handleChange}
-                  placeholder="Set Name"
-                />
-              </label>
-              <label className="flex flex-col  my-3">
-                <span className="text-md">Subset Name</span>
-                <input
-                  className="bg-stone-100 p-3 my-3 rounded-lg text-stone-800 font-light outline-0 w-full "
-                  type="text"
-                  name="subset"
-                  value={form.subset}
-                  onChange={handleChange}
-                  placeholder="Subset Name"
-                />
-              </label>
-              <label className="flex flex-col  my-3">
-                <span className="text-md">Gotra Name</span>
-                <input
-                  className="bg-stone-100 p-3 my-3 rounded-lg text-stone-800 font-light outline-0 w-full "
-                  type="text"
-                  name="gotra"
-                  value={form.gotra}
-                  onChange={handleChange}
-                  placeholder="Gotra Name"
+                  placeholder="Marital Status Name"
                 />
               </label>
               <div className="flex items-end justify-end ">

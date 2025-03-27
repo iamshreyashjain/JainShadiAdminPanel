@@ -2,8 +2,7 @@
 import { useState } from "react";
 
 //customData
-import data from "../../../data/TableData";
-import tableMenu from "../../../data/TableMenu";
+
 import languagesDropDown from "../../../data/dropDown/languagesDropDown";
 
 // reactIcons
@@ -11,42 +10,13 @@ import { FaAngleDown } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 
-import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
 export default function MemberLanguage() {
   const [memberLanguage, setmemberLanguage] = useState("");
-  const [currentData] = useState(data);
-  const [visibleDropdown, setVisibleDropdown] = useState(null);
-  const [tableMenuOption] = useState(tableMenu);
 
-  const handleAction = (action) => {
-    if (action === tableMenu[0]) {
-      console.log("View Clicked");
-    } else if (action === tableMenu[1]) {
-      console.log("Edit Clicked");
-    } else if (action === tableMenu[2]) {
-      console.log("Block Clicked");
-    } else if (action === tableMenu[3]) {
-      console.log("Package Clicked");
-    } else if (action === tableMenu[4]) {
-      console.log("Wallet Balance Clicked");
-    } else if (action === tableMenu[5]) {
-      console.log("Login as this Memeber Clicked");
-    } else if (action === tableMenu[6]) {
-      console.log("Deleted Clicked");
-    }
-    setVisibleDropdown(null);
-  };
 
-  const handleMouseEnter = (id) => {
-    setVisibleDropdown(id);
-  };
-
-  const handleMouseLeave = () => {
-    setVisibleDropdown(null);
-  };
-
+  
   //---------------------------> Member Languages <---------------------------
   const [defaultTextmemberLanguage, setdefaultmemberLanguage] =
     useState("Language Name");
@@ -102,30 +72,23 @@ export default function MemberLanguage() {
               </tr>
             </thead>
             <tbody>
-              {currentData.map((item) => (
+              {languagesDropDown.map((item) => (
                 <tr
                   key={item.id}
                   className="text-center border border-gray-300 text-sm"
                 >
-                  <td className="p-2">{item?.name}</td>
+                  <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
                     <div
                       className="inline-block"
-                      onMouseEnter={() => handleMouseEnter(item?.id)}
-                      onMouseLeave={handleMouseLeave}
+
+
                     >
                       <PiDotsThreeOutlineVertical
                         size={20}
                         className="cursor-pointer"
                       />
-                      {visibleDropdown === item?.id && (
-                        <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
-                          <TableMenu
-                            item={tableMenuOption}
-                            onItemClick={handleAction}
-                          />
-                        </div>
-                      )}
+                    
                     </div>
                   </td>
                 </tr>

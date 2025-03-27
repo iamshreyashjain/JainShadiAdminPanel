@@ -2,47 +2,16 @@
 import { useState } from "react";
 
 //Manually create Data
-import data from "../../../data/TableData";
-import tableMenu from "../../../data/TableMenu";
+import religionDropDown from "../../../data/dropDown/religionDropDown";
 
 // reactIcons
 import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
-import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
+
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
 export default function Religions() {
   const [religion, setreligion] = useState("");
-  const [currentData] = useState(data);
-  const [visibleDropdown, setVisibleDropdown] = useState(null);
-  const [tableMenuOption] = useState(tableMenu);
-
-  const handleAction = (action) => {
-    if (action === tableMenu[0]) {
-      console.log("View Clicked");
-    } else if (action === tableMenu[1]) {
-      console.log("Edit Clicked");
-    } else if (action === tableMenu[2]) {
-      console.log("Block Clicked");
-    } else if (action === tableMenu[3]) {
-      console.log("Package Clicked");
-    } else if (action === tableMenu[4]) {
-      console.log("Wallet Balance Clicked");
-    } else if (action === tableMenu[5]) {
-      console.log("Login as this Memeber Clicked");
-    } else if (action === tableMenu[6]) {
-      console.log("Deleted Clicked");
-    }
-    setVisibleDropdown(null);
-  };
-
-  const handleMouseEnter = (id) => {
-    setVisibleDropdown(id);
-  };
-
-  const handleMouseLeave = () => {
-    setVisibleDropdown(null);
-  };
 
   const handleChange = (e) => {
     setreligion(e.target.value);
@@ -62,7 +31,7 @@ export default function Religions() {
 
       {/* The Page is divided into two parts from here */}
       {/*------------------------------Part - I------------------------------*/}
-      <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6">
+      <div className="overflow-x-auto rounded-2xl p-4  grid grid-cols-2 gap-6 ">
         {/*------------------------------ Parent ------------------------------*/}
         <div className="shadow-lg p-2 rounded-2xl">
           {/*------------------------------ {Drop-Down} ------------------------------*/}
@@ -84,31 +53,20 @@ export default function Religions() {
               </tr>
             </thead>
             <tbody>
-              {currentData.map((item, index) => (
+              {religionDropDown.map((item) => (
                 <tr
-                  key={item.id}
+                  key={item.key}
                   className="text-center border border-gray-300 text-sm"
                 >
-                  <td className="">{index + 1}</td>
-                  <td className="p-2">{item?.name}</td>
+                  <td className="">{item.key}</td>
+                  <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
                     <div
                       className="inline-block"
-                      onMouseEnter={() => handleMouseEnter(item?.id)}
-                      onMouseLeave={handleMouseLeave}
                     >
                       <PiDotsThreeOutlineVertical
                         size={20}
-                        className="cursor-pointer"
                       />
-                      {visibleDropdown === item?.id && (
-                        <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
-                          <TableMenu
-                            item={tableMenuOption}
-                            onItemClick={handleAction}
-                          />
-                        </div>
-                      )}
                     </div>
                   </td>
                 </tr>
@@ -120,9 +78,11 @@ export default function Religions() {
         {/*------------------------------Part - II------------------------------*/}
         {/*------------------------------The Form part will come here : An Input value, Add Button------------------------------*/}
         <div className="">
-          <div className="shadow-lg p-2 rounded-2xl ">
+          <div className="shadow-lg p-2 rounded-2xl h-12/12 ">
             <div className="font-semibold">Add New Religion</div>
+            {/*------------------------------FORM------------------------------*/}
             <form>
+            {/*------------------------------Input-<Name: Religion>------------------------------*/}
               <label className="flex flex-col  my-3">
                 <span className="text-md">Name</span>
                 <input
@@ -134,7 +94,8 @@ export default function Religions() {
                   placeholder="Religion Name"
                 />
               </label>
-              <div className="flex items-end justify-end ">
+              {/*------------------------------Save Button------------------------------*/}
+              <div className="grid items-end justify-end ">
                 <button
                   type="submit"
                   className=" bg-rose-900 text-white py-2 px-8 rounded-md"

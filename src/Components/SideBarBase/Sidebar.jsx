@@ -93,19 +93,21 @@ export default function Sidebar() {
           link: "/home/profileAttribute/membersLanguage",
         },
         { key: 5, name: "On Behalf", link: "/home/profileAttribute/onBehalf" },
+        
         {
           key: 7,
           name: "Family Status",
           link: "/home/profileAttribute/familyStatus",
         },
+        { key: 6, name: "Marital Status", link: "/home/profileAttribute/maritalStatus" },
         {
-          key: 8,
+          key: 9,
           name: "Profile Section",
           link: "/home/profileAttribute/profileSection",
         },
-        { key: 9, name: "Set", link: "/home/profileAttribute/set" },
-        { key: 10, name: "Subset", link: "/home/profileAttribute/subset" },
-        { key: 11, name: "Gotra", link: "/home/profileAttribute/gotra" },
+        { key: 10, name: "Set", link: "/home/profileAttribute/set" },
+        { key: 11, name: "Subset", link: "/home/profileAttribute/subset" },
+        { key: 12, name: "Gotra", link: "/home/profileAttribute/gotra" },
       ],
     },
     {
