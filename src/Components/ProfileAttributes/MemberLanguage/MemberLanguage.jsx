@@ -15,8 +15,6 @@ import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTi
 export default function MemberLanguage() {
   const [memberLanguage, setmemberLanguage] = useState("");
 
-
-  
   //---------------------------> Member Languages <---------------------------
   const [defaultTextmemberLanguage, setdefaultmemberLanguage] =
     useState("Language Name");
@@ -79,16 +77,11 @@ export default function MemberLanguage() {
                 >
                   <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
-                    <div
-                      className="inline-block"
-
-
-                    >
+                    <div className="inline-block">
                       <PiDotsThreeOutlineVertical
                         size={20}
                         className="cursor-pointer"
                       />
-                    
                     </div>
                   </td>
                 </tr>

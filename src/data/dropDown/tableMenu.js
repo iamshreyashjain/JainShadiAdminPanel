@@ -11,4 +11,4 @@ const tableMenu = [
   },
 ];
 
-export default tableMenu
+export default tableMenu;

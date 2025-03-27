@@ -93,13 +93,17 @@ export default function Sidebar() {
           link: "/home/profileAttribute/membersLanguage",
         },
         { key: 5, name: "On Behalf", link: "/home/profileAttribute/onBehalf" },
-        
+
         {
           key: 7,
           name: "Family Status",
           link: "/home/profileAttribute/familyStatus",
         },
-        { key: 6, name: "Marital Status", link: "/home/profileAttribute/maritalStatus" },
+        {
+          key: 6,
+          name: "Marital Status",
+          link: "/home/profileAttribute/maritalStatus",
+        },
         {
           key: 9,
           name: "Profile Section",

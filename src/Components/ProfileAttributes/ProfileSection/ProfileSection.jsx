@@ -4,7 +4,7 @@ import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTi
 
 export default function ProfileSection() {
   const [checkboxValues, setCheckboxValues] = useState({
-    presentAddress: true,  // or 0 (depends on your requirement)
+    presentAddress: true, // or 0 (depends on your requirement)
     education: true,
     career: true,
     physicalAttributes: true,
@@ -41,7 +41,9 @@ export default function ProfileSection() {
       <div className="overflow-x-auto rounded-2xl p-4 grid grid-cols-1 gap-6">
         {/* Parent */}
         <div className="shadow-lg p-2 rounded-2xl bg-stone-100">
-          <h1 className="font-medium text-xl">Member Profile Selections Configuration</h1>
+          <h1 className="font-medium text-xl">
+            Member Profile Selections Configuration
+          </h1>
           <div>
             <form className="bg-stone-50 shadow-md grid grid-cols-1 gap-2  w-3/12 my-6 ">
               {/* Present Address */}
@@ -119,7 +121,7 @@ export default function ProfileSection() {
                 />{" "}
                 Personal Attitude & Behavior
               </label>
-              
+
               {/* Residency Information */}
               <label className="border rounded-sm border-gray-400 p-1 hover:bg-stone-100">
                 <input
@@ -166,15 +168,15 @@ export default function ProfileSection() {
 
               {/*Permanent Address*/}
               <label className="border rounded-sm border-gray-400 p-1 hover:bg-stone-100">
-              <input
-              type="checkbox"
-              name="permanentAddress"
-              checked={checkboxValues.permanentAddress}
-              onChange={handleChange}
-              />{" "}
-              Permanent Address
+                <input
+                  type="checkbox"
+                  name="permanentAddress"
+                  checked={checkboxValues.permanentAddress}
+                  onChange={handleChange}
+                />{" "}
+                Permanent Address
               </label>
-              
+
               {/*Family Information*/}
               <label className="border rounded-sm border-gray-400 p-1 hover:bg-stone-100">
                 <input
@@ -196,12 +198,10 @@ export default function ProfileSection() {
                 />{" "}
                 Partner Expectation
               </label>
-
-              
             </form>
-            <button className="bg-rose-900 text-white py-2 px-8 rounded-md float-right my-3">                
-            Update Settings
-          </button>
+            <button className="bg-rose-900 text-white py-2 px-8 rounded-md float-right my-3">
+              Update Settings
+            </button>
           </div>
         </div>
       </div>

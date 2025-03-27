@@ -4,7 +4,6 @@ import { useState } from "react";
 //customData
 import casteDropDown from "../../../data/dropDown/casteDropDown";
 
-
 // reactIcons
 import { FaAngleDown } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
@@ -18,8 +17,6 @@ export default function Caste() {
     religion: "",
     caste: "",
   });
-
-  
 
   //---------------------------> Caste <---------------------------
   const [defaultTextCaste, setdefaultTextCaste] = useState("Caste Name");
@@ -77,7 +74,7 @@ export default function Caste() {
           <table className="table-auto w-full ">
             <thead className="text-gray-700">
               <tr className="text-center text-sm bg-stone-100 border border-gray-300 border-b-0">
-              <th className=" w-12 ">S No</th>
+                <th className=" w-12 ">S No</th>
                 <th className="p-2 ">Name</th>
                 <th className="p-2 ">Options</th>
               </tr>
@@ -88,14 +85,10 @@ export default function Caste() {
                   key={item.key}
                   className="text-center border border-gray-300 text-sm"
                 >
-
                   <td className="p-2">{item?.key}</td>
                   <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
-                    <div
-                      className="inline-block"
-                      
-                    >
+                    <div className="inline-block">
                       <PiDotsThreeOutlineVertical
                         size={20}
                         className="cursor-pointer"

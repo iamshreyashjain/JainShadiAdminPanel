@@ -1,7 +1,6 @@
 //react
 import { useState } from "react";
 
-
 // reactIcons
 import { RiDeleteBinFill } from "react-icons/ri";
 import { MdModeEditOutline } from "react-icons/md";
@@ -12,9 +11,9 @@ import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTi
 
 export default function Gotra() {
   const [form, setform] = useState({
-    set : "",
-    subset:  "",
-    gotra:  "",
+    set: "",
+    subset: "",
+    gotra: "",
   });
   const data = [];
   //---------------------------> FORM <---------------------------
@@ -60,7 +59,7 @@ export default function Gotra() {
               </tr>
             </thead>
             <tbody>
-              {data && data.length > 0 ?
+              {data && data.length > 0 ? (
                 data?.map((item) => (
                   <tr
                     key={item.id}
@@ -70,20 +69,27 @@ export default function Gotra() {
                     <td className="">{item?.value}</td>
                     <td className="p-2 relative">
                       <div className="flex gap-2 items-center justify-center">
-                        <MdModeEditOutline className="bg-rose-800 text-white rounded p-[0.8px]" size={20} />
+                        <MdModeEditOutline
+                          className="bg-rose-800 text-white rounded p-[0.8px]"
+                          size={20}
+                        />
                         <RiDeleteBinFill className="text-pink-600" size={20} />
                       </div>
                     </td>
                   </tr>
-                )) : (
-                  <>
-                    <tr className="h-[200px]">
-                      <td colSpan="3" className="text-center text-3xl font-medium py-2 text-gray-300 align-middle h-full">
-                        Nothing found
-                      </td>
-                    </tr>
-                  </>
-                )}
+                ))
+              ) : (
+                <>
+                  <tr className="h-[200px]">
+                    <td
+                      colSpan="3"
+                      className="text-center text-3xl font-medium py-2 text-gray-300 align-middle h-full"
+                    >
+                      Nothing found
+                    </td>
+                  </tr>
+                </>
+              )}
             </tbody>
           </table>
         </div>
