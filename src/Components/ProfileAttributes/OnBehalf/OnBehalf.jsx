@@ -1,53 +1,24 @@
 //react
 import { useState } from "react";
 
-//Manually create Data
+//Static Data
 import OnBehalfOfData from "../../../data/OnBehalfOfData";
-import tableMenu from "../../../data/TableMenu";
 
 // reactIcons
+import { RiDeleteBinFill } from "react-icons/ri";
+import { MdModeEditOutline } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
-import { PiDotsThreeOutlineVertical } from "react-icons/pi";
-import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
+
+//Title
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
 export default function OnBehalf() {
   const [onbehalf, setonbehalf] = useState("");
   const [currentData] = useState(OnBehalfOfData);
-  const [visibleDropdown, setVisibleDropdown] = useState(null);
-  const [tableMenuOption] = useState(tableMenu);
 
-  const handleAction = (action) => {
-    if (action === tableMenu[0]) {
-      console.log("View Clicked");
-    } else if (action === tableMenu[1]) {
-      console.log("Edit Clicked");
-    } else if (action === tableMenu[2]) {
-      console.log("Block Clicked");
-    } else if (action === tableMenu[3]) {
-      console.log("Package Clicked");
-    } else if (action === tableMenu[4]) {
-      console.log("Wallet Balance Clicked");
-    } else if (action === tableMenu[5]) {
-      console.log("Login as this Memeber Clicked");
-    } else if (action === tableMenu[6]) {
-      console.log("Deleted Clicked");
-    }
-    setVisibleDropdown(null);
-  };
-
-  const handleMouseEnter = (id) => {
-    setVisibleDropdown(id);
-  };
-
-  const handleMouseLeave = () => {
-    setVisibleDropdown(null);
-  };
-
-  const handleChange = (e) => {
-    setonbehalf(e.target.value);
-  };
-
+const handleChange= (e) =>{
+  setonbehalf(e.target.value);
+}  
   return (
     <>
       {/*------------------------------Heading------------------------------*/}
@@ -78,37 +49,23 @@ export default function OnBehalf() {
           <table className="table-auto w-full ">
             <thead className="text-gray-700">
               <tr className="text-center text-sm bg-stone-100 border border-gray-300 border-b-0">
-                <th className=" w-12 ">S No</th>
+              <th className=" w-12 ">S No</th>
                 <th className="p-2 ">Name</th>
                 <th className="p-2 ">Options</th>
               </tr>
             </thead>
             <tbody>
-              {currentData.map((item, index) => (
+              {currentData.map((item) => (
                 <tr
                   key={item.id}
                   className="text-center border border-gray-300 text-sm"
                 >
-                  <td className="">{index + 1}</td>
-                  <td className="p-2">{item?.value}</td>
+                  <td className="">{item.key}</td>
+                  <td className="">{item?.value}</td>
                   <td className="p-2 relative">
-                    <div
-                      className="inline-block"
-                      onMouseEnter={() => handleMouseEnter(item?.id)}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <PiDotsThreeOutlineVertical
-                        size={20}
-                        className="cursor-pointer"
-                      />
-                      {visibleDropdown === item?.id && (
-                        <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
-                          <TableMenu
-                            item={tableMenuOption}
-                            onItemClick={handleAction}
-                          />
-                        </div>
-                      )}
+                    <div className= "flex gap-2 items-center justify-center">
+                    <MdModeEditOutline className ="bg-rose-800 text-white rounded p-[0.8px]" size= {20} /> 
+                    <RiDeleteBinFill className="text-pink-600" size={20}/>
                     </div>
                   </td>
                 </tr>

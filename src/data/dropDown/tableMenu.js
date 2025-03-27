@@ -10,3 +10,5 @@ const tableMenu = [
     delete: "Delete",
   },
 ];
+
+export default tableMenu

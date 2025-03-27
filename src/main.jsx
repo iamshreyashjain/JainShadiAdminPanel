@@ -46,6 +46,7 @@ import ProfileSection from "./Components/ProfileAttributes/ProfileSection/Profil
 import Set from "./Components/ProfileAttributes/Set/Set.jsx";
 import Subset from "./Components/ProfileAttributes/Subset/Subset.jsx";
 import Gotra from "./Components/ProfileAttributes/Gotra/Gotra.jsx";
+import MaritalStatuses from "./Components/ProfileAttributes/MaritalStatuses/MaritalStatuses.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -135,6 +136,7 @@ const router = createBrowserRouter([
         element: <MemberLanguage />,
       },
       { path: "/home/profileAttribute/onBehalf", element: <OnBehalf /> },
+      { path: "/home/profileAttribute/maritalStatus", element: <MaritalStatuses /> },
       {
         path: "/home/profileAttribute/familyStatus",
         element: <FamilyStatus />,

@@ -2,16 +2,15 @@
 import { useState } from "react";
 
 //customData
-import data from "../../../data/TableData";
-import tableMenu from "../../../data/TableMenu";
 import religionDropDown from "../../../data/dropDown/religionDropDown";
+import subCaste from "../../../data/dropDown/subCasteDropDown";
 
 // reactIcons
 import { FaAngleDown } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 
-import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
+
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
 export default function SubCaste() {
@@ -19,36 +18,8 @@ export default function SubCaste() {
     religion: "",
     caste: "",
   });
-  const [currentData] = useState(data);
-  const [visibleDropdown, setVisibleDropdown] = useState(null);
-  const [tableMenuOption] = useState(tableMenu);
 
-  const handleAction = (action) => {
-    if (action === tableMenu[0]) {
-      console.log("View Clicked");
-    } else if (action === tableMenu[1]) {
-      console.log("Edit Clicked");
-    } else if (action === tableMenu[2]) {
-      console.log("Block Clicked");
-    } else if (action === tableMenu[3]) {
-      console.log("Package Clicked");
-    } else if (action === tableMenu[4]) {
-      console.log("Wallet Balance Clicked");
-    } else if (action === tableMenu[5]) {
-      console.log("Login as this Memeber Clicked");
-    } else if (action === tableMenu[6]) {
-      console.log("Deleted Clicked");
-    }
-    setVisibleDropdown(null);
-  };
-
-  const handleMouseEnter = (id) => {
-    setVisibleDropdown(id);
-  };
-
-  const handleMouseLeave = () => {
-    setVisibleDropdown(null);
-  };
+  
 
   //---------------------------> Caste <---------------------------
   const [defaultTextCaste, setdefaultTextCaste] = useState("Caste Name");
@@ -129,30 +100,21 @@ export default function SubCaste() {
               </tr>
             </thead>
             <tbody>
-              {currentData.map((item) => (
+              {subCaste.map((item) => (
                 <tr
-                  key={item.id}
+                  key={item.key}
                   className="text-center border border-gray-300 text-sm"
                 >
-                  <td className="p-2">{item?.name}</td>
+                  <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
                     <div
                       className="inline-block"
-                      onMouseEnter={() => handleMouseEnter(item?.id)}
-                      onMouseLeave={handleMouseLeave}
+                      
                     >
                       <PiDotsThreeOutlineVertical
                         size={20}
                         className="cursor-pointer"
                       />
-                      {visibleDropdown === item?.id && (
-                        <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
-                          <TableMenu
-                            item={tableMenuOption}
-                            onItemClick={handleAction}
-                          />
-                        </div>
-                      )}
                     </div>
                   </td>
                 </tr>
@@ -164,7 +126,7 @@ export default function SubCaste() {
         {/*------------------------------Part - II------------------------------*/}
         {/*------------------------------The Form part will come here : An Input value, Add Button------------------------------*/}
         <div className="">
-          <div className="shadow-lg p-2 rounded-2xl ">
+          <div className="shadow-lg p-2 rounded-2xl h-12/12">
             <div className="font-semibold">Add New Caste</div>
 
             <form className="grid grid-cols-1 gap-3  mt-3 ">
@@ -195,7 +157,7 @@ export default function SubCaste() {
                   </button>
                   {isDropDownCaste && (
                     <div className="top-10 absolute w-full rounded-md border border-gray-300 bg-white z-10">
-                      <ul className="text-sm text-gray-500 z-10">
+                      <ul className="text-sm text-gray-500 z-10 h-32 overflow-x-scroll">
                         {religionDropDown.map(({ key, value }) => (
                           <li
                             key={key}
@@ -226,13 +188,13 @@ export default function SubCaste() {
                     <FaAngleDown className="ml-2 text-gray-400" />
                   </button>
                   {isDropDownSubCaste && (
-                    <div className="top-10  absolute w-full rounded-md border border-gray-300 bg-white">
-                      <ul className="text-sm text-gray-500">
-                        {religionDropDown.map(({ key, value }) => (
+                    <div className="bottom-10  absolute w-full rounded-md border border-gray-300 bg-white">
+                      <ul className="text-sm text-gray-500 h-32 overflow-x-scroll">
+                        {subCaste.map(({ key, value }) => (
                           <li
                             key={key}
                             onClick={() => handleSubCaste(value)}
-                            className=" block p-2  cursor-pointer hover:bg-stone-600 hover:text-white"
+                            className=" block p-2 cursor-pointer hover:bg-stone-600 hover:text-white"
                           >
                             {value}
                           </li>
