@@ -16,9 +16,9 @@ export default function OnBehalf() {
   const [onbehalf, setonbehalf] = useState("");
   const [currentData] = useState(OnBehalfOfData);
 
-const handleChange= (e) =>{
-  setonbehalf(e.target.value);
-}  
+  const handleChange = (e) => {
+    setonbehalf(e.target.value);
+  };
   return (
     <>
       {/*------------------------------Heading------------------------------*/}
@@ -49,7 +49,7 @@ const handleChange= (e) =>{
           <table className="table-auto w-full ">
             <thead className="text-gray-700">
               <tr className="text-center text-sm bg-stone-100 border border-gray-300 border-b-0">
-              <th className=" w-12 ">S No</th>
+                <th className=" w-12 ">S No</th>
                 <th className="p-2 ">Name</th>
                 <th className="p-2 ">Options</th>
               </tr>
@@ -63,9 +63,12 @@ const handleChange= (e) =>{
                   <td className="">{item.key}</td>
                   <td className="">{item?.value}</td>
                   <td className="p-2 relative">
-                    <div className= "flex gap-2 items-center justify-center">
-                    <MdModeEditOutline className ="bg-rose-800 text-white rounded p-[0.8px]" size= {20} /> 
-                    <RiDeleteBinFill className="text-pink-600" size={20}/>
+                    <div className="flex gap-2 items-center justify-center">
+                      <MdModeEditOutline
+                        className="bg-rose-800 text-white rounded p-[0.8px]"
+                        size={20}
+                      />
+                      <RiDeleteBinFill className="text-pink-600" size={20} />
                     </div>
                   </td>
                 </tr>

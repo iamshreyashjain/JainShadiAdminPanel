@@ -136,7 +136,10 @@ const router = createBrowserRouter([
         element: <MemberLanguage />,
       },
       { path: "/home/profileAttribute/onBehalf", element: <OnBehalf /> },
-      { path: "/home/profileAttribute/maritalStatus", element: <MaritalStatuses /> },
+      {
+        path: "/home/profileAttribute/maritalStatus",
+        element: <MaritalStatuses />,
+      },
       {
         path: "/home/profileAttribute/familyStatus",
         element: <FamilyStatus />,

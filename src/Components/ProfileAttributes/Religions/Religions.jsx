@@ -61,12 +61,8 @@ export default function Religions() {
                   <td className="">{item.key}</td>
                   <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
-                    <div
-                      className="inline-block"
-                    >
-                      <PiDotsThreeOutlineVertical
-                        size={20}
-                      />
+                    <div className="inline-block">
+                      <PiDotsThreeOutlineVertical size={20} />
                     </div>
                   </td>
                 </tr>
@@ -82,7 +78,7 @@ export default function Religions() {
             <div className="font-semibold">Add New Religion</div>
             {/*------------------------------FORM------------------------------*/}
             <form>
-            {/*------------------------------Input-<Name: Religion>------------------------------*/}
+              {/*------------------------------Input-<Name: Religion>------------------------------*/}
               <label className="flex flex-col  my-3">
                 <span className="text-md">Name</span>
                 <input

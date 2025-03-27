@@ -10,7 +10,6 @@ import { FaAngleDown } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 
-
 import ProfileAttributesTitle from "../../ReusableComponents/ProfileAttributesTitle/ProfileAttributesTitle";
 
 export default function SubCaste() {
@@ -18,8 +17,6 @@ export default function SubCaste() {
     religion: "",
     caste: "",
   });
-
-  
 
   //---------------------------> Caste <---------------------------
   const [defaultTextCaste, setdefaultTextCaste] = useState("Caste Name");
@@ -107,10 +104,7 @@ export default function SubCaste() {
                 >
                   <td className="p-2">{item?.value}</td>
                   <td className="p-2 relative">
-                    <div
-                      className="inline-block"
-                      
-                    >
+                    <div className="inline-block">
                       <PiDotsThreeOutlineVertical
                         size={20}
                         className="cursor-pointer"
