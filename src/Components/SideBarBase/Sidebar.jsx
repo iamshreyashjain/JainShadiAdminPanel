@@ -129,8 +129,12 @@ export default function Sidebar() {
     {
       index: 5,
       name: "Wallet",
-      link: "/home/wallet",
+      link: "/home/wallet/walletTransactionHistory",
       logo: <IoWallet />,
+      subMenu: [
+        { key: 1, name: "Wallet Transaction History", link: "/home/wallet/walletTransactionHistory" },
+        { key: 2, name: "Manual Wallet Recharge Request", link: "/home/wallet/manualwalletTransactionHistory" },
+      ]
     },
     {
       index: 6,

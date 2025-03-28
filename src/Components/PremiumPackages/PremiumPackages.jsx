@@ -8,47 +8,33 @@ import Pagination from "../ReusableComponents/Pagination/Pagination";
 import TableMenu from "../ReusableComponents/TableMenu/TableMenu";
 import tableMenu from "./../../data/TableMenu.js"
 
+
+import PremiumPackages_TableData from "../../data/PremiumPackages_TableData.js";
+
 // reactIcons
 import { BsPlusCircleDotted } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
-import { PiDotsThreeOutlineVertical } from "react-icons/pi";
+
 import { CgSearch } from "react-icons/cg";
+import { MdModeEditOutline } from "react-icons/md";
 
 
 export default function PremiumPackages() {
   const [search, setSearch] = useState("");
-  const data =[];
+  const data = PremiumPackages_TableData;
   const [currentData, setCurrentData] = useState(data);
-  const [visibleDropdown, setVisibleDropdown] = useState(null);
-  const [tableMenuOption, settableMenuOption] = useState(tableMenu);
 
-  const handleAction = (action) => {
-    if (action === tableMenu[0]) {
-      console.log("View Clicked");
-    } else if (action === tableMenu[1]) {
-      console.log("Edit Clicked");
-    } else if (action === tableMenu[2]) {
-      console.log("Block Clicked");
-    } else if (action === tableMenu[3]) {
-      console.log("Package Clicked");
-    } else if (action === tableMenu[4]) {
-      console.log("Wallet Balance Clicked");
-    } else if (action === tableMenu[5]) {
-      console.log("Login as this Memeber Clicked");
-    } else if (action === tableMenu[6]) {
-      console.log("Deleted Clicked");
-    }
-    setVisibleDropdown(null);
+  const [tableMenuOption] = useState(tableMenu);
+
+  const [isToggled, setIsToggled] = useState({});
+  const handleToggle = (key) => {
+    setIsToggled((prevState) => ({
+      ...prevState,
+      [key]: !prevState[key], // Toggle the specific item's state
+    }));
   };
 
-  const handleMouseEnter = (id) => {
-    setVisibleDropdown(id);
-  };
-
-  const handleMouseLeave = () => {
-    setVisibleDropdown(null);
-  };
-
+ 
   const handleChange = (e) => {
     e.preventDefault();
     setSearch(e.target.value);
@@ -63,7 +49,7 @@ export default function PremiumPackages() {
           className="flex items-center bg-rose-900 text-white p-2 gap-2 rounded-md"
         >
           <BsPlusCircleDotted size={22} />
-          Add New Member
+          Add New Package
         </Link>
       </div>
       <div className="overflow-x-auto m-4 rounded-2xl p-4 shadow-2xl">
@@ -86,62 +72,59 @@ export default function PremiumPackages() {
         <table className="table-auto w-full">
           <thead className="text-gray-700">
             <tr className="text-center text-sm bg-stone-100 border border-gray-300 border-b-0">
-              <th className="p-2 ">S No.</th>
-              <th className="p-2 ">User Code</th>
+            <th className=" w-12 ">S No</th>
               <th className="p-2 ">Name</th>
-              <th className="p-2 ">Gender</th>
-              <th className="p-2 ">Profile Reported</th>
-              <th className="p-2 ">Member Since</th>
-              <th className="p-2 ">Member Status</th>
+              <th className="p-2 ">Price</th>
+              <th className="p-2 ">Status</th>
               <th className="p-2 ">Options</th>
             </tr>
           </thead>
           <tbody>
-            {currentData.map((item, index) => (
+          {currentData && currentData.length > 0 ? 
+            ( 
+            currentData.map((item) => (
               <tr
-                key={item.id}
+                key={item.key}
                 className="text-center border border-gray-300 text-sm"
               >
-                <td className="p-2">{index + 1}</td>
-                <td className="p-2">{item?.userCode}</td>
+                <td className="">{item.key}</td>
                 <td className="p-2">{item?.name}</td>
-                <td className="p-2">{item?.gender}</td>
-                <td className="p-2">{item?.profileReported}</td>
-
-                <td className="p-2">{item?.memberSince}</td>
-                <td>
-                  <button
-                    className={`px-2 py-1 font-light text-white min-w-24 rounded-lg ${
-                      item.memberStatus === "Active"
-                        ? "bg-green-600"
-                        : "bg-orange-600"
-                    }`}
-                  >
-                    {item?.memberStatus}
-                  </button>
-                </td>
-                <td className="p-2 relative">
+                <td className="p-2">{item?.price}</td>
+                <td className="p-2">
+                <div
+                  className={`w-12 h-6 flex mx-auto rounded-full mt-2 cursor-pointer ${
+                    isToggled[item?.key] ? "bg-rose-800" : "bg-gray-800"
+                  }`}
+                  onClick={() => handleToggle(item?.key)}
+                >
                   <div
-                    className="inline-block"
-                    onMouseEnter={() => handleMouseEnter(item?.id)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <PiDotsThreeOutlineVertical
-                      size={20}
-                      className="cursor-pointer"
-                    />
-                    {visibleDropdown === item?.id && (
-                      <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
-                        <TableMenu
-                          item={tableMenuOption}
-                          onItemClick={handleAction}
-                        />
-                      </div>
-                    )}
-                  </div>
+                    className={`bg-stone-200 w-6 h-6 rounded-full shadow-lg transform duration-300 ${
+                      isToggled[item?.key] ? "translate-x-7" : "translate-x-0"
+                    }`}
+                  ></div>
+                </div>
+              </td>
+
+                <td className="p-2 relative ">
+                    <MdModeEditOutline
+                        className="bg-rose-800 mx-auto text-white rounded p-[0.8px]"
+                        size={20}
+                      />
                 </td>
               </tr>
-            ))}
+                  )) ) : (
+                    <>
+                    <tr className="h-[200px]">
+                    <td
+                      colSpan="8"
+                      className="text-center text-3xl font-medium py-2 text-gray-300 align-middle h-full"
+                    >
+                      Nothing found
+                    </td>
+                  </tr>
+                    </>
+                  )} 
+
           </tbody>
         </table>
         <Pagination
