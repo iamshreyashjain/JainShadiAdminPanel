@@ -21,7 +21,7 @@ export default function Create_PremiumPackagesForm() {
     profileInfoView: "",
     galleryImageView: "",
     validityFor: "",
-    autoProfileMatchingShow: ""
+    autoProfileMatchingShow: "",
   });
 
   //---------------------------> memberVerified => toggle <---------------------------
@@ -151,7 +151,6 @@ export default function Create_PremiumPackagesForm() {
               />
             </label>
 
-
             {/* IV */}
             {/* FROM:  profileInfoView & galleryImageView */}
             {/* FORM: profileInfoView */}
@@ -198,22 +197,21 @@ export default function Create_PremiumPackagesForm() {
               />
             </label>
 
-
             {/* II OF II */}
-            <label className="grid grid-cols-1">
-            </label>
-
+            <label className="grid grid-cols-1"></label>
 
             <div>
               Auto Profile Matching Show
               <div
-                className={`w-12 h-6 flex items-center bg-gray-300 rounded-full mt-2  cursor-pointer ${isToggled ? "bg-rose-800" : "bg-gray-800"
-                  }`}
+                className={`w-12 h-6 flex items-center bg-gray-300 rounded-full mt-2  cursor-pointer ${
+                  isToggled ? "bg-rose-800" : "bg-gray-800"
+                }`}
                 onClick={handleToggle}
               >
                 <div
-                  className={`bg-stone-200 w-6 h-6 rounded-full shadow-lg transform duration-300 ${isToggled ? "translate-x-7" : "translate-x-0"
-                    }`}
+                  className={`bg-stone-200 w-6 h-6 rounded-full shadow-lg transform duration-300 ${
+                    isToggled ? "translate-x-7" : "translate-x-0"
+                  }`}
                 ></div>
               </div>
             </div>

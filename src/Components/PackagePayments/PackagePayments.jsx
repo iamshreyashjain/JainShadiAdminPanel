@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 
 import Pagination from "../ReusableComponents/Pagination/Pagination";
 
-
 import TableMenu from "../ReusableComponents/TableMenu/TableMenu";
-import tableMenu from "./../../data/TableMenu.js"
+import tableMenu from "./../../data/TableMenu.js";
 
 // reactIcons
 import { BsPlusCircleDotted } from "react-icons/bs";
@@ -14,9 +13,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { PiDotsThreeOutlineVertical } from "react-icons/pi";
 import { CgSearch } from "react-icons/cg";
 
-
 export default function PackagePayments() {
-  const data =[];
+  const data = [];
   const [currentData, setCurrentData] = useState(data);
   const [visibleDropdown, setVisibleDropdown] = useState(null);
   const [tableMenuOption] = useState(tableMenu);
@@ -50,10 +48,8 @@ export default function PackagePayments() {
 
   return (
     <>
-
       <div className="flex justify-between items-center m-4">
         <span className="text-xl font-medium my-2 ">Package Payment List </span>
-        
       </div>
       <div className="overflow-x-auto m-4 rounded-2xl p-4 shadow-2xl">
         <div className="flex justify-between items-center ">
@@ -61,7 +57,6 @@ export default function PackagePayments() {
             <span>All</span>
             <IoIosArrowDown />
           </div>
-          
         </div>
         <table className="table-auto w-full">
           <thead className="text-gray-700">
@@ -78,54 +73,54 @@ export default function PackagePayments() {
             </tr>
           </thead>
           <tbody>
-          {currentData && currentData.length > 0 ? 
-            ( 
-            currentData.map((item, index) => (
-              <tr
-                key={item.id}
-                className="text-center border border-gray-300 text-sm"
-              >
-                <td className="">{index + 1}</td>
-                <td className="p-2">{item?.memberName}</td>
-                <td className="p-2">{item?.package}</td>
-                <td className="p-2">{item?.paymentMethod}</td>
-                <td className="p-2">{item?.amount}</td>
-                <td className="p-2">{item?.paymentStatus}</td>
-                <td className="p-2">{item?.paymentCode}</td>
-                <td className="p-2">{item?.purchaseDate}</td>
-                <td className="p-2 relative">
-                  <div
-                    className="inline-block"
-                    onMouseEnter={() => handleMouseEnter(item?.id)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <PiDotsThreeOutlineVertical
-                      size={20}
-                      className="cursor-pointer"
-                    />
-                    {visibleDropdown === item?.id && (
-                      <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
-                        <TableMenu
-                          item={tableMenuOption}
-                          onItemClick={handleAction}
-                        />
-                      </div>
-                    )}
-                  </div>
-                </td>
-              </tr>
-                  )) ) : (
-                    <>
-                    <tr className="h-[200px]">
-                    <td
-                      colSpan="8"
-                      className="text-center text-3xl font-medium py-2 text-gray-300 align-middle h-full"
+            {currentData && currentData.length > 0 ? (
+              currentData.map((item, index) => (
+                <tr
+                  key={item.id}
+                  className="text-center border border-gray-300 text-sm"
+                >
+                  <td className="">{index + 1}</td>
+                  <td className="p-2">{item?.memberName}</td>
+                  <td className="p-2">{item?.package}</td>
+                  <td className="p-2">{item?.paymentMethod}</td>
+                  <td className="p-2">{item?.amount}</td>
+                  <td className="p-2">{item?.paymentStatus}</td>
+                  <td className="p-2">{item?.paymentCode}</td>
+                  <td className="p-2">{item?.purchaseDate}</td>
+                  <td className="p-2 relative">
+                    <div
+                      className="inline-block"
+                      onMouseEnter={() => handleMouseEnter(item?.id)}
+                      onMouseLeave={handleMouseLeave}
                     >
-                      Nothing found
-                    </td>
-                  </tr>
-                    </>
-                  )} 
+                      <PiDotsThreeOutlineVertical
+                        size={20}
+                        className="cursor-pointer"
+                      />
+                      {visibleDropdown === item?.id && (
+                        <div className="absolute right-0 w-42 bg-stone-100 text-gray-900 shadow-lg rounded-md  z-10">
+                          <TableMenu
+                            item={tableMenuOption}
+                            onItemClick={handleAction}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <>
+                <tr className="h-[200px]">
+                  <td
+                    colSpan="8"
+                    className="text-center text-3xl font-medium py-2 text-gray-300 align-middle h-full"
+                  >
+                    Nothing found
+                  </td>
+                </tr>
+              </>
+            )}
           </tbody>
         </table>
         <Pagination
