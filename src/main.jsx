@@ -6,7 +6,6 @@ import Home from "./Components/Home/Home.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import ProtectedRoute from "./Components/ProtectedRoutes/ProtectedRoute.jsx";
 
-
 import { HappyStories } from "./Components/HappyStories/HappyStories.jsx";
 import { BlogSystem } from "./Components/BlogSystem/BlogSystem.jsx";
 import { Marketing } from "./Components/Marketing/Marketing.jsx";
@@ -56,7 +55,6 @@ import PackagePayments from "./Components/PackagePayments/PackagePayments.jsx";
 //wallet
 import { WalletTransactionHistory } from "./Components/Wallet/Wallet Transaction History/WalletTransactionHistory.jsx";
 import { ManualWalletRechargeRequest } from "./Components/Wallet/Manual Wallet Recharge Request/ManualWalletRechargeRequest.jsx";
-
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -163,19 +161,26 @@ const router = createBrowserRouter([
       { path: "/home/profileAttribute/gotra", element: <Gotra /> },
 
       // -------------------------------Premium Packages-------------------------------
-      
+
       { path: "/home/premiumPackages", element: <PremiumPackages /> },
-      { path: "/home/create/premiumPackages", element: <Create_PremiumPackagesForm /> },
-      
+      {
+        path: "/home/create/premiumPackages",
+        element: <Create_PremiumPackagesForm />,
+      },
+
       // -------------------------------Premium Packages-------------------------------
       { path: "/home/packagePayments", element: <PackagePayments /> },
-      
-      
+
       // -------------------------------Wallet-------------------------------
-      { path: "/home/wallet/walletTransactionHistory", element: <WalletTransactionHistory /> },
-      { path: "/home/wallet/manualwalletTransactionHistory", element: <ManualWalletRechargeRequest /> },
-      
-      
+      {
+        path: "/home/wallet/walletTransactionHistory",
+        element: <WalletTransactionHistory />,
+      },
+      {
+        path: "/home/wallet/manualwalletTransactionHistory",
+        element: <ManualWalletRechargeRequest />,
+      },
+
       // -------------------------------Happy Stories-------------------------------
       { path: "/home/happyStories", element: <HappyStories /> },
 

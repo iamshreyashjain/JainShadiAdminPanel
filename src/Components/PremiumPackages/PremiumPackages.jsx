@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 
 import Pagination from "../ReusableComponents/Pagination/Pagination";
 
-
 import TableMenu from "../ReusableComponents/TableMenu/TableMenu";
-import tableMenu from "./../../data/TableMenu.js"
-
+import tableMenu from "./../../data/TableMenu.js";
 
 import PremiumPackages_TableData from "../../data/PremiumPackages_TableData.js";
 
@@ -17,7 +15,6 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import { CgSearch } from "react-icons/cg";
 import { MdModeEditOutline } from "react-icons/md";
-
 
 export default function PremiumPackages() {
   const [search, setSearch] = useState("");
@@ -34,14 +31,12 @@ export default function PremiumPackages() {
     }));
   };
 
- 
   const handleChange = (e) => {
     e.preventDefault();
     setSearch(e.target.value);
   };
   return (
     <>
-
       <div className="flex justify-between items-center m-4">
         <span className="text-xl font-medium ">Premium Packages</span>
         <Link
@@ -72,7 +67,7 @@ export default function PremiumPackages() {
         <table className="table-auto w-full">
           <thead className="text-gray-700">
             <tr className="text-center text-sm bg-stone-100 border border-gray-300 border-b-0">
-            <th className=" w-12 ">S No</th>
+              <th className=" w-12 ">S No</th>
               <th className="p-2 ">Name</th>
               <th className="p-2 ">Price</th>
               <th className="p-2 ">Status</th>
@@ -80,51 +75,52 @@ export default function PremiumPackages() {
             </tr>
           </thead>
           <tbody>
-          {currentData && currentData.length > 0 ? 
-            ( 
-            currentData.map((item) => (
-              <tr
-                key={item.key}
-                className="text-center border border-gray-300 text-sm"
-              >
-                <td className="">{item.key}</td>
-                <td className="p-2">{item?.name}</td>
-                <td className="p-2">{item?.price}</td>
-                <td className="p-2">
-                <div
-                  className={`w-12 h-6 flex mx-auto rounded-full mt-2 cursor-pointer ${
-                    isToggled[item?.key] ? "bg-rose-800" : "bg-gray-800"
-                  }`}
-                  onClick={() => handleToggle(item?.key)}
+            {currentData && currentData.length > 0 ? (
+              currentData.map((item) => (
+                <tr
+                  key={item.key}
+                  className="text-center border border-gray-300 text-sm"
                 >
-                  <div
-                    className={`bg-stone-200 w-6 h-6 rounded-full shadow-lg transform duration-300 ${
-                      isToggled[item?.key] ? "translate-x-7" : "translate-x-0"
-                    }`}
-                  ></div>
-                </div>
-              </td>
-
-                <td className="p-2 relative ">
-                    <MdModeEditOutline
-                        className="bg-rose-800 mx-auto text-white rounded p-[0.8px]"
-                        size={20}
-                      />
-                </td>
-              </tr>
-                  )) ) : (
-                    <>
-                    <tr className="h-[200px]">
-                    <td
-                      colSpan="8"
-                      className="text-center text-3xl font-medium py-2 text-gray-300 align-middle h-full"
+                  <td className="">{item.key}</td>
+                  <td className="p-2">{item?.name}</td>
+                  <td className="p-2">{item?.price}</td>
+                  <td className="p-2">
+                    <div
+                      className={`w-12 h-6 flex mx-auto rounded-full mt-2 cursor-pointer ${
+                        isToggled[item?.key] ? "bg-rose-800" : "bg-gray-800"
+                      }`}
+                      onClick={() => handleToggle(item?.key)}
                     >
-                      Nothing found
-                    </td>
-                  </tr>
-                    </>
-                  )} 
+                      <div
+                        className={`bg-stone-200 w-6 h-6 rounded-full shadow-lg transform duration-300 ${
+                          isToggled[item?.key]
+                            ? "translate-x-7"
+                            : "translate-x-0"
+                        }`}
+                      ></div>
+                    </div>
+                  </td>
 
+                  <td className="p-2 relative ">
+                    <MdModeEditOutline
+                      className="bg-rose-800 mx-auto text-white rounded p-[0.8px]"
+                      size={20}
+                    />
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <>
+                <tr className="h-[200px]">
+                  <td
+                    colSpan="8"
+                    className="text-center text-3xl font-medium py-2 text-gray-300 align-middle h-full"
+                  >
+                    Nothing found
+                  </td>
+                </tr>
+              </>
+            )}
           </tbody>
         </table>
         <Pagination
