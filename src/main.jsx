@@ -7,8 +7,6 @@ import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import ProtectedRoute from "./Components/ProtectedRoutes/ProtectedRoute.jsx";
 
 
-import { PackagePayments } from "./Components/PackagePayments/PackagePayments.jsx";
-import { Wallet } from "./Components/Wallet/Wallet.jsx";
 import { HappyStories } from "./Components/HappyStories/HappyStories.jsx";
 import { BlogSystem } from "./Components/BlogSystem/BlogSystem.jsx";
 import { Marketing } from "./Components/Marketing/Marketing.jsx";
@@ -18,7 +16,7 @@ import { Settings } from "./Components/Settings/Settings.jsx";
 import { Staffs } from "./Components/Staffs/Staffs.jsx";
 import { System } from "./Components/System/System.jsx";
 
-//MEMBRS
+//MEMBERS -> Modules
 import FreeMembers from "./Components/Members/FreeMembers/FreeMembers.jsx";
 import PremiumMembers from "./Components/Members/PremiumMembers/PremiumMembers.jsx";
 import DeletedMembers from "./Components/Members/DeletedMembers/DeletedMembers.jsx";
@@ -35,12 +33,7 @@ import CreateMember_RequestForCallArrange from "./Components/Members/CreateMembe
 import CreateMember_UnverifiedMemberList from "./Components/Members/CreateMember_UnverifiedMemberList/CreateMember_UnverifiedMemberList.jsx";
 import CreateMember_RequestForDeactivationAccount from "./Components/Members/CreateMember_RequestForCallArrange/CreateMember_RequestForDeactivationAccount.jsx";
 
-
-//Premium Packages
-import PremiumPackages from "./Components/PremiumPackages/PremiumPackages.jsx";
-import Create_PremiumPackagesForm from "./Components/PremiumPackages/Create_PremiumPackagesForm/Create_PremiumPackagesForm.jsx";
-
-//Profile Attribute
+//Profile Attribute -> Modules
 import Religions from "./Components/ProfileAttributes/Religions/Religions.jsx";
 import Caste from "./Components/ProfileAttributes/Caste/Caste.jsx";
 import SubCaste from "./Components/ProfileAttributes/Sub Caste/SubCaste.jsx";
@@ -52,6 +45,18 @@ import Set from "./Components/ProfileAttributes/Set/Set.jsx";
 import Subset from "./Components/ProfileAttributes/Subset/Subset.jsx";
 import Gotra from "./Components/ProfileAttributes/Gotra/Gotra.jsx";
 import MaritalStatuses from "./Components/ProfileAttributes/MaritalStatuses/MaritalStatuses.jsx";
+
+//Premium Packages -> Modules
+import PremiumPackages from "./Components/PremiumPackages/PremiumPackages.jsx";
+import Create_PremiumPackagesForm from "./Components/PremiumPackages/Create_PremiumPackagesForm/Create_PremiumPackagesForm.jsx";
+
+// PackagePayments
+import PackagePayments from "./Components/PackagePayments/PackagePayments.jsx";
+
+//wallet
+import { WalletTransactionHistory } from "./Components/Wallet/Wallet Transaction History/WalletTransactionHistory.jsx";
+import { ManualWalletRechargeRequest } from "./Components/Wallet/Manual Wallet Recharge Request/ManualWalletRechargeRequest.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -158,13 +163,22 @@ const router = createBrowserRouter([
       { path: "/home/profileAttribute/gotra", element: <Gotra /> },
 
       // -------------------------------Premium Packages-------------------------------
-
+      
       { path: "/home/premiumPackages", element: <PremiumPackages /> },
       { path: "/home/create/premiumPackages", element: <Create_PremiumPackagesForm /> },
-
+      
+      // -------------------------------Premium Packages-------------------------------
       { path: "/home/packagePayments", element: <PackagePayments /> },
-      { path: "/home/wallet", element: <Wallet /> },
+      
+      
+      // -------------------------------Wallet-------------------------------
+      { path: "/home/wallet/walletTransactionHistory", element: <WalletTransactionHistory /> },
+      { path: "/home/wallet/manualwalletTransactionHistory", element: <ManualWalletRechargeRequest /> },
+      
+      
+      // -------------------------------Happy Stories-------------------------------
       { path: "/home/happyStories", element: <HappyStories /> },
+
       { path: "/home/blogSystem", element: <BlogSystem /> },
       { path: "/home/Marketing", element: <Marketing /> },
       { path: "/home/uploadedFiles", element: <UploadedFiles /> },

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Pagination from "../../ReusableComponents/Pagination/Pagination";
 import MembersTitle from "../../ReusableComponents/MembersTitle/MembersTitle";
 
-import data from "../../../data/TableData";
+import data from "../../../data/Members_TableData";
 import tableMenu from "../../../data/TableMenu";
 
 // reactIcons

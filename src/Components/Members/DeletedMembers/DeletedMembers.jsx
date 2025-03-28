@@ -8,7 +8,7 @@ import { CgSearch } from "react-icons/cg";
 
 import TableMenu from "../../ReusableComponents/TableMenu/TableMenu";
 
-import data from "../../../data/TableData";
+import data from "../../../data/Members_TableData";
 import tableMenu from "../../../data/TableMenu";
 
 import Pagination from "../../ReusableComponents/Pagination/Pagination";
