@@ -7,13 +7,13 @@ import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import ProtectedRoute from "./Components/ProtectedRoutes/ProtectedRoute.jsx";
 
 import { HappyStories } from "./Components/HappyStories/HappyStories.jsx";
-import { BlogSystem } from "./Components/BlogSystem/BlogSystem.jsx";
-import { Marketing } from "./Components/Marketing/Marketing.jsx";
+
+
 import { UploadedFiles } from "./Components/UploadedFiles/UploadedFiles.jsx";
-import { WebsiteSetup } from "./Components/WebsiteSetup/WebsiteSetup.jsx";
+
 import { Settings } from "./Components/Settings/Settings.jsx";
 import { Staffs } from "./Components/Staffs/Staffs.jsx";
-import { System } from "./Components/System/System.jsx";
+
 
 //MEMBERS -> Modules
 import FreeMembers from "./Components/Members/FreeMembers/FreeMembers.jsx";
@@ -53,8 +53,8 @@ import Create_PremiumPackagesForm from "./Components/PremiumPackages/Create_Prem
 import PackagePayments from "./Components/PackagePayments/PackagePayments.jsx";
 
 //wallet
-import { WalletTransactionHistory } from "./Components/Wallet/Wallet Transaction History/WalletTransactionHistory.jsx";
-import { ManualWalletRechargeRequest } from "./Components/Wallet/Manual Wallet Recharge Request/ManualWalletRechargeRequest.jsx";
+import WalletTransactionHistory  from "./Components/Wallet/Wallet Transaction History/WalletTransactionHistory.jsx";
+import  ManualWalletRechargeRequest  from "./Components/Wallet/Manual Wallet Recharge Request/ManualWalletRechargeRequest.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -184,13 +184,10 @@ const router = createBrowserRouter([
       // -------------------------------Happy Stories-------------------------------
       { path: "/home/happyStories", element: <HappyStories /> },
 
-      { path: "/home/blogSystem", element: <BlogSystem /> },
-      { path: "/home/Marketing", element: <Marketing /> },
       { path: "/home/uploadedFiles", element: <UploadedFiles /> },
-      { path: "/home/websiteSetup", element: <WebsiteSetup /> },
+
       { path: "/home/settings", element: <Settings /> },
       { path: "/home/staff", element: <Staffs /> },
-      { path: "/home/system", element: <System /> },
     ],
   },
 ]);
