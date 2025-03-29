@@ -150,30 +150,15 @@ export default function Sidebar() {
       link: "/home/happyStories",
       logo: <RiHandHeartFill />,
     },
-    {
-      index: 7,
-      name: "Blog System",
-      link: "/home/blogSystem",
-      logo: <IoCreateOutline />,
-    },
-    {
-      index: 8,
-      name: "Marketing",
-      link: "/home/marketing",
-      logo: <IoMdVolumeHigh />,
-    },
+   
+   
     {
       index: 9,
       name: "Uploaded Files",
       link: "/home/uploadedFiles",
       logo: <MdOutlineUploadFile />,
     },
-    {
-      index: 10,
-      name: "Website Setup",
-      link: "/home/websiteSetup",
-      logo: <IoDesktopSharp />,
-    },
+   
     {
       index: 11,
       name: "Settings",
@@ -186,12 +171,7 @@ export default function Sidebar() {
       link: "/home/staff",
       logo: <ImUsers />,
     },
-    {
-      index: 13,
-      name: "System",
-      link: "/home/system",
-      logo: <IoSettings />,
-    },
+    
   ];
 
   return (
